@@ -1,0 +1,7 @@
+id: "built-with-django-subcription"
+name: "Built with Django Subscription"
+description: "Prod Users for Built with Django"
+type: "SERVICE"
+category: "EDUCATIONAL_AND_TEXTBOOKS"
+home_url: "https://builtwithdjango.com"
+image_url: "https://builtwithdjango.com/static/vendors/images/logo.png"
