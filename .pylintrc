@@ -2,7 +2,7 @@
 
 # Python code to execute, usually for sys.path manipulation such as
 # pygtk.require().
-init-hook="import sys; sys.path.insert(1, './src/paypal')"
+#init-hook=
 
 # Files or directories to be skipped. They should be base names, not
 # paths.
@@ -17,7 +17,7 @@ ignore-paths=
 ignore-patterns=^\.#
 
 # Pickle collected data for later comparisons.
-persistent=no
+persistent=yes
 
 # List of plugins (as comma separated values of python modules names) to load,
 # usually to register additional checkers.
@@ -51,7 +51,7 @@ unsafe-load-any-extension=no
 extension-pkg-allow-list=
 
 # Minimum supported python version
-py-version = 3.8.13
+py-version = 3.7.2
 
 # Control the amount of potential inferred values when inferring a single
 # object. This can help the performance when dealing with large functions or
@@ -101,6 +101,8 @@ disable=
     format,
     # We anticipate #3512 where it will become optional
     fixme,
+    # I added...
+    import-error,
 
 
 [REPORTS]
