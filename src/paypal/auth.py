@@ -1,8 +1,7 @@
 """Authentication Utils for Paypal API"""
 
 import requests
-
-from paypal.settings import PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PAYPAL_URL
+from settings import PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PAYPAL_URL
 
 
 def get_access_token() -> str:

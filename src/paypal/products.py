@@ -2,9 +2,8 @@
 
 import requests
 import yaml
-
-from paypal.auth import get_access_token
-from paypal.settings import PAYPAL_URL
+from auth import get_access_token
+from settings import PAYPAL_URL, YAML_DATA_DIR
 
 
 def list_products() -> dict:
@@ -28,7 +27,7 @@ def create_product() -> dict:
     Returns:
         dict: Information about create product
     """
-    with open("./src/paypal/product.yml", "r", encoding="UTF-8") as product_dict:
+    with open(YAML_DATA_DIR / "product.yml", "r", encoding="UTF-8") as product_dict:
         access_token = get_access_token()
         data = yaml.load(product_dict, Loader=yaml.BaseLoader)
         response = requests.post(
