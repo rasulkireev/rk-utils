@@ -3,7 +3,9 @@
 import requests
 import yaml
 from auth import get_access_token
-from settings import PAYPAL_URL, YAML_DATA_DIR
+from settings import PAYPAL_URL, PAYPAL_YAML_DATA_DIR
+
+PRODUCTS_ENDPOINT = "/v1/catalogs/products"
 
 
 def list_products() -> dict:
@@ -14,7 +16,7 @@ def list_products() -> dict:
     """
     access_token = get_access_token()
     response = requests.get(
-        url=PAYPAL_URL + "/v1/catalogs/products",
+        url=PAYPAL_URL + PRODUCTS_ENDPOINT,
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {access_token}"},
     ).json()
 
@@ -27,11 +29,11 @@ def create_product() -> dict:
     Returns:
         dict: Information about create product
     """
-    with open(YAML_DATA_DIR / "product.yml", "r", encoding="UTF-8") as product_dict:
+    with open(PAYPAL_YAML_DATA_DIR / "product.yml", "r", encoding="UTF-8") as product_dict:
         access_token = get_access_token()
         data = yaml.load(product_dict, Loader=yaml.BaseLoader)
         response = requests.post(
-            url=PAYPAL_URL + "/v1/catalogs/products",
+            url=PAYPAL_URL + PRODUCTS_ENDPOINT,
             json=data,
             headers={"Content-Type": "application/json", "Authorization": f"Bearer {access_token}"},
         ).json()

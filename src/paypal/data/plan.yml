@@ -1,7 +1,8 @@
 ---
 product_id: built-with-django-subcription
-name: "Montly Plan"
-description: "Montly subscription"
+name: "Built with Django Montly Plan"
+description: "Montly Subscription to Built with Django"
+status: ACTIVE
 billing_cycles:
   - frequency:
       interval_unit: "MONTH"
@@ -11,7 +12,7 @@ billing_cycles:
     total_cycles: 0
     pricing_scheme:
       fixed_price:
-        value: "19.95"
+        value: "20"
         currency_code: "USD"
 payment_preferences:
   auto_bill_outstanding: true
