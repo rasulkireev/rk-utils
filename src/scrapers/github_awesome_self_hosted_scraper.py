@@ -119,28 +119,29 @@ def document_was_updated_today(collection: str, name: str) -> bool:
         return False
 
 
-# create db connections and create tables
-mongo_db = mongo_client[COLLECTION_NAME]
-mongo_collection = mongo_db[COLLECTION_NAME]
-create_or_update_typesense_schema(COLLECTION_NAME)
+if __name__ == "__main__":
+    # create db connections and create tables
+    mongo_db = mongo_client[COLLECTION_NAME]
+    mongo_collection = mongo_db[COLLECTION_NAME]
+    create_or_update_typesense_schema(COLLECTION_NAME)
 
-list_of_repo_urls = get_all_github_repo_links_mentioned_on_web_page(
-    "https://github.com/awesome-selfhosted/awesome-selfhosted"
-)
-set_of_repo_urls = set(list_of_repo_urls)
-num_of_repos = len(set_of_repo_urls)
+    list_of_repo_urls = get_all_github_repo_links_mentioned_on_web_page(
+        "https://github.com/awesome-selfhosted/awesome-selfhosted"
+    )
+    set_of_repo_urls = set(list_of_repo_urls)
+    num_of_repos = len(set_of_repo_urls)
 
-for index, repo_url in enumerate(set_of_repo_urls):
-    repo_name = urlparse(repo_url).path.strip("/").split("/")[-1]
+    for index, repo_url in enumerate(set_of_repo_urls):
+        repo_name = urlparse(repo_url).path.strip("/").split("/")[-1]
 
-    # if document_was_updated_today(COLLECTION_NAME, repo_name):
-    #   print(f"{repo_name} repo was already updated today")
-    # else:
+        # if document_was_updated_today(COLLECTION_NAME, repo_name):
+        #   print(f"{repo_name} repo was already updated today")
+        # else:
 
-    repo_data_dict = get_data_from_repo(repo_url)
-    create_or_update_typesense_document(COLLECTION_NAME, repo_data_dict)
+        repo_data_dict = get_data_from_repo(repo_url)
+        create_or_update_typesense_document(COLLECTION_NAME, repo_data_dict)
 
-    mongo_collection.insert_one(repo_data_dict)
-    print(f"Inserted Mongo document: {repo_data_dict['name']}")
+        mongo_collection.insert_one(repo_data_dict)
+        print(f"Inserted Mongo document: {repo_data_dict['name']}")
 
-    print(f"Repo {index+1}/{num_of_repos} is done: {repo_data_dict['name']}")
+        print(f"Repo {index+1}/{num_of_repos} is done: {repo_data_dict['name']}")
