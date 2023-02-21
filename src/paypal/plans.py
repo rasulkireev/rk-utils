@@ -2,8 +2,9 @@
 
 import requests
 import yaml
-from auth import get_access_token
-from settings import PAYPAL_URL, PAYPAL_YAML_DATA_DIR
+
+from src.paypal.auth import get_access_token
+from src.paypal.settings import PAYPAL_URL, PAYPAL_YAML_DATA_DIR
 
 PLANS_ENDPOINT = "/v1/billing/plans"
 
@@ -22,6 +23,7 @@ def list_plans(product_id: str) -> dict:
         url=PAYPAL_URL + PLANS_ENDPOINT,
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {access_token}"},
         params={"product_id": product_id},
+        timeout=100,
     ).json()
 
     return response
@@ -40,6 +42,7 @@ def create_plan() -> dict:
             url=PAYPAL_URL + PLANS_ENDPOINT,
             json=data,
             headers={"Content-Type": "application/json", "Authorization": f"Bearer {access_token}"},
+            timeout=100,
         ).json()
 
     return response

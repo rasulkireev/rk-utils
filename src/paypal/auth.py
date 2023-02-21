@@ -15,6 +15,7 @@ def get_access_token() -> str:
         auth=(PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET),
         headers={"Content-Type": "application/x-www-form-urlencoded"},
         data="grant_type=client_credentials",
+        timeout=100,
     ).json()
 
     return response["access_token"]

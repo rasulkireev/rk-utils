@@ -2,8 +2,9 @@
 
 import requests
 import yaml
-from auth import get_access_token
-from settings import PAYPAL_URL, PAYPAL_YAML_DATA_DIR
+
+from src.paypal.auth import get_access_token
+from src.paypal.settings import PAYPAL_URL, PAYPAL_YAML_DATA_DIR
 
 PRODUCTS_ENDPOINT = "/v1/catalogs/products"
 
@@ -18,6 +19,7 @@ def list_products() -> dict:
     response = requests.get(
         url=PAYPAL_URL + PRODUCTS_ENDPOINT,
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {access_token}"},
+        timeout=100,
     ).json()
 
     return response
@@ -36,6 +38,7 @@ def create_product() -> dict:
             url=PAYPAL_URL + PRODUCTS_ENDPOINT,
             json=data,
             headers={"Content-Type": "application/json", "Authorization": f"Bearer {access_token}"},
+            timeout=100,
         ).json()
 
     return response
