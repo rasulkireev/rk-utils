@@ -9,4 +9,4 @@ TYPESENSE_API_KEY = os.environ["TYPESENSE_API_KEY"]
 
 MONGO_DB_URI = os.environ["MONGO_DB_URI"]
 
-GITHUB_PAT = os.environ["GITHUB_PAT"]
+GITHUB_PAT = os.environ["PAT"]
