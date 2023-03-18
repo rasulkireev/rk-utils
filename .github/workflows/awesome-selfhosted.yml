@@ -3,7 +3,7 @@ name: Awesome Selfhosted Scraper
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'  # Run at 1 am every day
+    - cron: '0 0 * * 1'  # Run at 1 am every day
 
 env:
   MONGO_DB_URI: ${{ secrets.MONGO_DB_URI }}
