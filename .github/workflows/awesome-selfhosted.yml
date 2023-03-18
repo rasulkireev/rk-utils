@@ -17,10 +17,13 @@ jobs:
           python-version: "3.8"
 
       - name: Install Poetry
-        uses: Gr1N/setup-poetry@v8
+        uses: snok/install-poetry@v1
 
       - name: Poetry Version
         run: poetry --version
+
+      - name: Install Project
+        run: poetry install --no-interaction
 
       - name: Run Python function
         run: poetry run python ./src/scrapers/github_awesome_self_hosted_scraper.py
