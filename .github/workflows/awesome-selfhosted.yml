@@ -1,8 +1,15 @@
 name: Awesome Selfhosted Scraper
+
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 1 * * *'  # Run at 1 am every day
+
+env:
+  MONGO_DB_URI: ${{ secrets.MONGO_DB_URI }}
+  TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
+  TYPESENSE_HOST: ${{ secrets.TYPESENSE_HOST }}
+  PAT: ${{ secrets.PAT }}
 
 jobs:
   run-python-function:
