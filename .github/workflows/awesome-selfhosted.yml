@@ -12,12 +12,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.8'
+          python-version: "3.8"
 
-      - name: Install dependencies
-        run: pip install -r ./requirements.txt
+      - name: Install Poetry
+        uses: Gr1N/setup-poetry@v8
+
+      - name: Poetry Version
+        run: poetry --version
 
       - name: Run Python function
-        run: python ./src/scrapers/github_awesome_self_hosted_scraper.py
+        run: poetry run python ./src/scrapers/github_awesome_self_hosted_scraper.py
