@@ -95,6 +95,7 @@ def create_or_update_typesense_document(collection: str, document: dict) -> None
 
 
 def document_was_updated_today(collection: str, name: str) -> bool:
+    # pylint: disable=too-many-try-statements
     try:
         search_parameters = {
             "q": name,

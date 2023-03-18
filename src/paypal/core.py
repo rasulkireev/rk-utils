@@ -1,7 +1,7 @@
 """Core module which is used to access all other Paypal Utils"""
 
-from plans import create_plan, list_plans
-from products import list_products
+from src.paypal.plans import create_plan, list_plans
+from src.paypal.products import list_products
 
 if __name__ == "__main__":
     new_plan = create_plan()
