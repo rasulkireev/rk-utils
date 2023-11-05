@@ -11,11 +11,6 @@ on:
         description: 'Token of the App on Caprover'
         required: true
         type: string
-      pg_version:
-        description: 'Major Version of Postgres'
-        required: true
-        type: string
-        default: 15
 
 jobs:
   build-and-deploy:
@@ -35,20 +30,13 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.REGISTRY_TOKEN }}
 
-      - name: Set Env Vars
-        id: env
-        run: |
-          echo "PG_VERSION=${{ inputs.pg_version }}" >> $GITHUB_ENV
-
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
           context: .
           file: images/Dockerfile.postgres
           push: true
-          tags: rasulkireev/pgvector-postgres:${{ inputs.pg_version }}
-          build-args: |
-            PG_VERSION=${{ steps.env.outputs.PG_VERSION }}
+          tags: rasulkireev/pgvector-postgres:15
 
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@main
@@ -56,4 +44,4 @@ jobs:
             server: ${{ secrets.CAPROVER_SERVER }}
             app: ${{ inputs.app_name }}
             token: ${{ inputs.app_name }}
-            image: rasulkireev/pgvector-postgres:${{ inputs.pg_version }}
+            image: rasulkireev/pgvector-postgres:15
