@@ -5,6 +5,8 @@ RUN apt-get update && \
 
 RUN git clone --branch v0.5.1 https://github.com/pgvector/pgvector.git
 
+WORKDIR /pgvector
+
 RUN make
 RUN make install
 
