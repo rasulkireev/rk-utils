@@ -35,6 +35,11 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.REGISTRY_TOKEN }}
 
+      - name: Set Env Vars
+        id: env
+        run: |
+          echo "PG_VERSION=${{ inputs.pg_version }}" >> $GITHUB_ENV
+
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
@@ -42,8 +47,8 @@ jobs:
           file: images/Dockerfile.postgres
           push: true
           tags: rasulkireev/pgvector-postgres:${{ inputs.pg_version }}
-          secrets-envs: |
-            PG_VERSION=${{ inputs.pg_version }}
+          build-args: |
+            PG_VERSION=${{ steps.env.outputs.PG_VERSION }}
 
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@main

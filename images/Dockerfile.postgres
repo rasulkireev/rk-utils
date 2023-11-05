@@ -1,4 +1,6 @@
-FROM postgres:${PG_VERSION} AS pgvector-builder
+ARG PG_VERSION
+
+FROM postgres:$PG_VERSION AS pgvector-builder
 
 RUN apk add git build-base clang llvm13-dev
 
