@@ -1,7 +1,5 @@
 FROM postgres:15 AS pgvector-builder
 
-RUN apk add git build-base clang llvm13-dev
-
 WORKDIR /home
 RUN git clone --branch v0.5.1 https://github.com/pgvector/pgvector.git
 WORKDIR /home/pgvector
