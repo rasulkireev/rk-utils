@@ -1,0 +1,15 @@
+FROM postgres:${PG_VERSION} AS pgvector-builder
+
+RUN apk add git build-base clang llvm13-dev
+
+WORKDIR /home
+RUN git clone --branch v0.5.1 https://github.com/pgvector/pgvector.git
+WORKDIR /home/pgvector
+RUN make
+RUN make install
+
+FROM postgres:${PG_VERSION}
+
+COPY --from=pgvector-builder /usr/local/lib/postgresql/bitcode/vector.index.bc /usr/local/lib/postgresql/bitcode/vector.index.bc
+COPY --from=pgvector-builder /usr/local/lib/postgresql/vector.so /usr/local/lib/postgresql/vector.so
+COPY --from=pgvector-builder /usr/local/share/postgresql/extension /usr/local/share/postgresql/extension

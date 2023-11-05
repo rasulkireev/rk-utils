@@ -69,6 +69,7 @@ def get_data_from_repo(repo: str) -> dict:
             "id": str(response["id"]),
             "last_updated": str(datetime.now()),
             "name": response["name"],
+            "owner": response["owner"]["login"],
             "description": response["description"],
             "repo_url": response["html_url"],
             "stars": response["stargazers_count"],

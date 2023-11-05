@@ -19,6 +19,7 @@ pymongo = "^4.3.3"
 paho-mqtt = "^1.6.1"
 httpx = "^0.23.3"
 html2text = "^2020.1.16"
+markdown = "^3.4.4"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"

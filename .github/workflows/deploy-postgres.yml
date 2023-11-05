@@ -1,0 +1,55 @@
+name: Deploy Postgres
+
+on:
+  workflow_dispatch:
+    inputs:
+      app_name:
+        description: 'Name of the App your are deploying to on Caprover'
+        required: true
+        type: string
+      app_token:
+        description: 'Token of the App on Caprover'
+        required: true
+        type: string
+      pg_version:
+        description: 'Major Version of Postgres'
+        required: true
+        type: string
+        default: 15
+
+env:
+  PG_VERSION: ${{ inputs.pg_version }}
+
+jobs:
+  build-and-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: images/Dockerfile.postgres
+          push: true
+          tags: rasulkireev/pgvector-postgres:${{ env.PG_VERSION }}
+
+      - name: Deploy to CapRover
+        uses: caprover/deploy-from-github@main
+        with:
+            server: ${{ secrets.CAPROVER_SERVER }}
+            app: ${{ inputs.app_name }}
+            token: ${{ inputs.app_name }}
+            image: rasulkireev/pgvector-postgres:${{ env.PG_VERSION }}
