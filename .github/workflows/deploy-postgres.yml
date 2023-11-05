@@ -36,7 +36,7 @@ jobs:
           context: .
           file: images/Dockerfile.postgres
           push: true
-          tags: rasulkireev/pgvector-postgres:15
+          tags: ghcr.io/rasulkireev/pgvector-postgres:15
 
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@main
