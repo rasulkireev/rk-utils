@@ -42,7 +42,7 @@ jobs:
           file: images/Dockerfile.postgres
           push: true
           tags: rasulkireev/pgvector-postgres:${{ inpupts.pg_version }}
-          secrets: |
+          secrets-envs: |
             PG_VERSION=${{ inpupts.pg_version }}
 
       - name: Deploy to CapRover
