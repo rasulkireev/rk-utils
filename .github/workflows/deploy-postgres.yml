@@ -17,9 +17,6 @@ on:
         type: string
         default: 15
 
-env:
-  PG_VERSION: ${{ inputs.pg_version }}
-
 jobs:
   build-and-deploy:
     name: Deploy
@@ -44,7 +41,9 @@ jobs:
           context: .
           file: images/Dockerfile.postgres
           push: true
-          tags: rasulkireev/pgvector-postgres:${{ env.PG_VERSION }}
+          tags: rasulkireev/pgvector-postgres:${{ inpupts.pg_version }}
+          secrets: |
+            PG_VERSION=${{ inpupts.pg_version }}
 
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@main
@@ -52,4 +51,4 @@ jobs:
             server: ${{ secrets.CAPROVER_SERVER }}
             app: ${{ inputs.app_name }}
             token: ${{ inputs.app_name }}
-            image: rasulkireev/pgvector-postgres:${{ env.PG_VERSION }}
+            image: rasulkireev/pgvector-postgres:${{ inpupts.pg_version }}
