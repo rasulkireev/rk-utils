@@ -36,12 +36,12 @@ jobs:
           context: .
           file: images/Dockerfile.postgres
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/pgvector-postgres:15
+          tags: ghcr.io/${{ github.repository_owner }}/custom-postgres:15
 
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@main
         with:
             server: ${{ secrets.CAPROVER_SERVER }}
             app: ${{ inputs.app_name }}
-            token: ${{ inputs.app_name }}
-            image: ghcr.io/${{ github.repository_owner }}/pgvector-postgres:15
+            token: ${{ inputs.app_token }}
+            image: ghcr.io/${{ github.repository_owner }}/custom-postgres:15
