@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-mark hold locales && \
     apt-get install -y git build-essential postgresql-server-dev-15
 
-RUN mkdir tmp && cd tmp && \
+RUN cd tmp && \
     git clone --branch v0.6.2 https://github.com/pgvector/pgvector.git && \
     cd pgvector && \
     make clean && \
