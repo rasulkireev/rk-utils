@@ -1,4 +1,4 @@
-name: Deploy Postgres
+name: Build and Push Postgres to Dockerhub
 
 on:
   push:
