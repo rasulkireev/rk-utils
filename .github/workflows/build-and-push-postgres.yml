@@ -31,4 +31,4 @@ jobs:
           file: images/Dockerfile.postgres
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/custom-postgres:15
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64, linux/arm64
