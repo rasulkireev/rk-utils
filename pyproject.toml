@@ -20,6 +20,8 @@ paho-mqtt = "^1.6.1"
 httpx = "^0.23.3"
 html2text = "^2020.1.16"
 markdown = "^3.4.4"
+anthropic = "^0.45.2"
+pygithub = "^2.5.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
