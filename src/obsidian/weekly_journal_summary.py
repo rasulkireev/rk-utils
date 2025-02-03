@@ -70,15 +70,15 @@ def analyze_with_claude(content):
 
     client = anthropic.Client(api_key=api_key)
 
-    prompt = f"""Please analyze the following daily notes and create two separate summaries:
+    prompt = f"""Analyze these daily notes and provide two brief summaries:
 
-    1. Readwise-related activities and achievements
-    - Focus on work tasks, projects, and accomplishments related to Readwise
+    1. Readwise Work
+    - Key tasks and achievements related to Readwise
 
-    2. Personal matters
-    - Focus on personal activities, events, and achievements
+    2. Personal
+    - Notable personal activities and events
 
-    Please format each section with bullet points and keep the summaries concise but informative.
+    Use bullet points and be concise.
 
     Content:
     {content}"""
