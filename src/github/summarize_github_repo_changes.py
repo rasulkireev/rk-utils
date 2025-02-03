@@ -13,8 +13,8 @@ load_dotenv()
 
 def ensure_cache_directory() -> Path:
     """Ensure the cache directory exists and return its path."""
-    script_dir = Path(__file__).parent
-    cache_dir = script_dir / 'caches'
+    current_dir = Path.cwd()  # Get current working directory
+    cache_dir = current_dir / 'caches'
     cache_dir.mkdir(exist_ok=True)
     return cache_dir
 
@@ -45,6 +45,45 @@ def handle_rate_limit(g: Github):
 
             print("\nRate limit reset, resuming operations...")
 
+def get_existing_commits_for_month(summaries_file: Path, month_start: datetime, month_end: datetime) -> Dict[str, dict]:
+    """Get existing commit summaries for the specified month."""
+    if not summaries_file.exists():
+        return {}
+
+    try:
+        with open(summaries_file, 'r') as f:
+            all_summaries = json.load(f)
+
+        print(f"\nChecking {len(all_summaries)} total summaries for period: "
+              f"{month_start.strftime('%Y-%m-%d')} to {month_end.strftime('%Y-%m-%d')}")
+
+        # Filter summaries for the specified month
+        month_summaries = {}
+        for sha, summary in all_summaries.items():
+            try:
+                commit_date = summary.get('date')
+                if commit_date:
+                    # Print some debug info for the first few entries
+                    if len(month_summaries) < 3:
+                        print(f"Processing commit date: {commit_date}")
+
+                    # Handle both full ISO format and date-only format
+                    if 'T' in commit_date:
+                        commit_datetime = datetime.fromisoformat(commit_date.split('T')[0])
+                    else:
+                        commit_datetime = datetime.fromisoformat(commit_date)
+
+                    if month_start <= commit_datetime < month_end:
+                        month_summaries[sha] = summary
+            except (ValueError, AttributeError) as e:
+                print(f"Warning: Could not process date for commit {sha[:7]}: {e}")
+                continue
+
+        print(f"Found {len(month_summaries)} commits for the specified month")
+        return month_summaries
+    except Exception as e:
+        print(f"Error reading existing summaries: {e}")
+        return {}
 
 def get_month_commits(repo_url: str, date: datetime) -> tuple[List, str]:
     """Get all commits for a specific month from a GitHub repository."""
@@ -100,7 +139,6 @@ def get_month_commits(repo_url: str, date: datetime) -> tuple[List, str]:
         print(f"Error during commit fetching: {str(e)}")
         raise e
 
-
 def analyze_commit(client: anthropic.Client, commit, repo_url: str) -> dict:
     """Analyze a single commit using Claude."""
     # Extract owner and repo name from URL for commit link
@@ -115,7 +153,10 @@ def analyze_commit(client: anthropic.Client, commit, repo_url: str) -> dict:
         commit_info = {
             'sha': commit.sha,
             'message': commit.commit.message,
-            'author': commit.commit.author.name,
+            'author': {
+                'name': commit.commit.author.name,
+                'email': commit.commit.author.email
+            },
             'date': commit.commit.author.date.isoformat(),
             'url': commit_url,
             'files': [
@@ -154,33 +195,50 @@ def analyze_commit(client: anthropic.Client, commit, repo_url: str) -> dict:
 
     return {
         "summary": message.content[0].text,
-        "url": commit_url
+        "url": commit_url,
+        "date": commit_info['date'],
+        "author": commit_info['author'],
+        "sha": commit.sha
     }
-
 
 def generate_master_summary(client: anthropic.Client, summaries: Dict[str, dict], start_date: datetime, repo_url: str) -> str:
     """Generate a master summary from individual commit summaries."""
+    if not summaries:
+        return "No commits found for the specified time period."
+
     # Extract owner and repo name from URL
     _, _, _, owner, repo_name = repo_url.rstrip('/').split('/')
 
+    # Prepare a more structured summary of commits for Claude
+    formatted_summaries = []
+    for sha, data in summaries.items():
+        formatted_summaries.append({
+            "summary": data["summary"],
+            "url": data["url"],
+            "date": data["date"],
+            "author": data["author"]["name"],
+            "sha": data["sha"]
+        })
+
     prompt = f"""
-    Review these commit summaries for the week of {start_date.strftime('%Y-%m-%d')} and provide a comprehensive overview of all changes.
+    Review these {len(summaries)} commit summaries for {start_date.strftime('%B %Y')} and provide a comprehensive overview of all changes.
     Focus on the main themes, features, bug fixes, and overall development progress.
 
-    For each key change or feature you mention, include the relevant commit URL in parentheses at the end of the point.
-
     Repository: {repo_url}
+    Time period: {start_date.strftime('%B %Y')}
+    Number of commits: {len(summaries)}
+
     Commit summaries:
-    {json.dumps(summaries, indent=2)}
+    {json.dumps(formatted_summaries, indent=2)}
 
     Please provide the summary in a structured format with sections for:
     1. Overview
-    2. Key Changes and Features (include commit URLs in parentheses for each point)
-    3. Development Patterns
+    2. Key Changes and Features (include commit URLs and author names in parentheses for each point)
+    3. Development Patterns and Contributors
     4. Recommendations (if any)
 
     Example format for changes:
-    - Implemented user authentication system (https://github.com/owner/repo/commit/abc123)
+    - Implemented user authentication system (by John Doe - https://github.com/owner/repo/commit/abc123)
     """
 
     message = client.messages.create(
@@ -216,74 +274,76 @@ if __name__ == "__main__":
         exit(1)
 
     try:
-        # Step 1: Get commits
-        commits, repo_name = get_month_commits(repo_url, analysis_date)
-        print(f"Found {len(commits)} commits")
-
-        # Ask for confirmation
-        response = input("Do you want to continue with the analysis? (y/n): ")
-        if response.lower() != 'y':
-            print("Operation cancelled")
-            exit()
-
-        # Create output file paths
-        cache_dir = ensure_cache_directory()
-        summaries_file = cache_dir / f"{repo_name}_commit_summaries.json"
-        master_file = cache_dir / f"{repo_name}_{analysis_date.strftime('%Y_%m')}_master_summary.txt"
-
-        # Load existing results if file exists
-        existing_summaries = {}
-        if summaries_file.exists():
-            with open(summaries_file, 'r') as f:
-                existing_summaries = json.load(f)
-            print(f"Loaded {len(existing_summaries)} existing summaries")
-
-        # Initialize Anthropic client
-        client = anthropic.Client(api_key=os.getenv('ANTHROPIC_API_KEY'))
-
-        # Step 2: Analyze each commit
-        summaries = existing_summaries.copy()
-        for i, commit in enumerate(commits, 1):
-            if commit.sha in summaries:
-                print(f"Skipping commit {i}/{len(commits)} (already analyzed)")
-                continue
-
-            print(f"Analyzing commit {i}/{len(commits)} ({commit.sha[:7]})")
-            try:
-                result = analyze_commit(client, commit, repo_url)
-                summaries[commit.sha] = result
-
-                # Save after each successful analysis
-                with open(summaries_file, 'w') as f:
-                    json.dump(summaries, f, indent=2)
-                print(f"Saved summary to {summaries_file}")
-
-            except Exception as e:
-                print(f"Error analyzing commit {commit.sha[:7]}: {str(e)}")
-                continue
-
-        # Step 3: Generate master summary for the month
-        print("\nGenerating master summary...")
-        # Filter summaries for the current month
+        # Calculate month range
         month_start = analysis_date.replace(day=1)
         if month_start.month == 12:
             month_end = month_start.replace(year=month_start.year + 1, month=1, day=1)
         else:
             month_end = month_start.replace(month=month_start.month + 1, day=1)
 
-        month_summaries = {
-            sha: summary for sha, summary in summaries.items()
-            if month_start <= datetime.fromisoformat(summary.get('date', '').split('T')[0]) < month_end
-        }
+        # Create output file paths
+        cache_dir = ensure_cache_directory()
+        summaries_file = cache_dir / f"django_commit_summaries.json"  # Using explicit name instead of repo_name
+        master_file = cache_dir / f"django_{analysis_date.strftime('%Y_%m')}_master_summary.txt"
 
-        master_summary = generate_master_summary(client, month_summaries, month_start, repo_url)
+        # Check existing summaries first
+        existing_month_summaries = get_existing_commits_for_month(summaries_file, month_start, month_end)
+        print(f"Found {len(existing_month_summaries)} existing summaries for {month_start.strftime('%B %Y')}")
 
-        # Save master summary
-        with open(master_file, 'w') as f:
-            f.write(master_summary)
+        # Ask if user wants to fetch new commits
+        response = input("Do you want to fetch new commits from GitHub? (y/n): ")
 
-        print(f"\nMaster summary saved to {master_file}")
-        print("\nAnalysis complete!")
+        if response.lower() == 'y':
+            # Get new commits
+            commits, repo_name = get_month_commits(repo_url, analysis_date)
+            print(f"Found {len(commits)} commits")
+
+            # Load all existing summaries
+            existing_summaries = {}
+            if summaries_file.exists():
+                with open(summaries_file, 'r') as f:
+                    existing_summaries = json.load(f)
+
+            # Initialize Anthropic client
+            client = anthropic.Client(api_key=os.getenv('ANTHROPIC_API_KEY'))
+
+            # Analyze new commits
+            summaries = existing_summaries.copy()
+            for i, commit in enumerate(commits, 1):
+                if commit.sha in summaries:
+                    print(f"Skipping commit {i}/{len(commits)} (already analyzed)")
+                    continue
+
+                print(f"Analyzing commit {i}/{len(commits)} ({commit.sha[:7]})")
+                try:
+                    result = analyze_commit(client, commit, repo_url)
+                    summaries[commit.sha] = result
+
+                    # Save after each successful analysis
+                    with open(summaries_file, 'w') as f:
+                        json.dump(summaries, f, indent=2)
+                    print(f"Saved summary to {summaries_file}")
+
+                except Exception as e:
+                    print(f"Error analyzing commit {commit.sha[:7]}: {str(e)}")
+                    continue
+
+            # Update existing_month_summaries with new analyses
+            existing_month_summaries = get_existing_commits_for_month(summaries_file, month_start, month_end)
+
+        # Generate master summary only if we have commits for the month
+        if existing_month_summaries:
+            print(f"\nGenerating master summary for {len(existing_month_summaries)} commits...")
+            client = anthropic.Client(api_key=os.getenv('ANTHROPIC_API_KEY'))
+            master_summary = generate_master_summary(client, existing_month_summaries, month_start, repo_url)
+
+            with open(master_file, 'w') as f:
+                f.write(master_summary)
+
+            print(f"\nMaster summary saved to {master_file}")
+            print("\nAnalysis complete!")
+        else:
+            print(f"\nNo commits found for {month_start.strftime('%B %Y')}. Cannot generate master summary.")
 
     except Exception as e:
         print(f"Error: {str(e)}")
