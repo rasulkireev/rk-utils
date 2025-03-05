@@ -2,6 +2,8 @@ ARG POSTGRES_VERSION
 
 FROM postgres:${POSTGRES_VERSION}
 
+ARG POSTGRES_VERSION
+
 RUN apt-get update && \
     apt-mark hold locales && \
     apt-get install -y git build-essential postgresql-server-dev-${POSTGRES_VERSION}
