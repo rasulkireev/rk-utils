@@ -35,5 +35,5 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/custom-postgres:${{ matrix.postgres_version }}
           platforms: linux/amd64, linux/arm64
-          build-args:
-            - POSTGRES_VERSION=${{ matrix.postgres_version }}
+          build-args: |
+              POSTGRES_VERSION: ${{ matrix.postgres_version }}
