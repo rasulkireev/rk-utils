@@ -1388,5 +1388,285 @@
       "email": "jacobtylerwalls@gmail.com"
     },
     "sha": "2a61b5f97c0f9ec9ff3f321090bd8e6ed609793c"
+  },
+  "47c837a1ff96ef1b10b44477a7a9f72283d12e83": {
+    "summary": "This commit removes a Python 2 compatibility workaround from the Django test suite's fixtures_regress tests. The change is linked to issue #23919 and reverts a previous commit (7e19641). Since Django no longer supports Python 2, this legacy code is no longer needed. The change removes 6 lines of code from the tests/fixtures_regress/tests.py file with no new additions.",
+    "url": "https://github.com/django/django/commit/47c837a1ff96ef1b10b44477a7a9f72283d12e83",
+    "date": "2025-02-11T17:38:58+00:00",
+    "author": {
+      "name": "Tim Graham",
+      "email": "timograham@gmail.com"
+    },
+    "sha": "47c837a1ff96ef1b10b44477a7a9f72283d12e83"
+  },
+  "41239fe34d64e801212dccaa4585e4802d0fac68": {
+    "summary": "This commit fixes issue #36149 in Django, enabling support for subquery values in tuple-based exact matches and \"in\" lookups. Here's the key changes:\n\n1. Main Fix:\n- Adapted existing subquery logic to work with tuple comparisons\n- Ensures proper select mask assignment for subqueries\n- Validates matching member counts on both sides of the operator\n\n2. Technical Changes:\n- Major refactoring in tuple_lookups.py (51 changes)\n- Added new lookup handling logic in lookups.py\n- Updated related test cases, particularly in composite_pk tests\n- Modified query handling in multiple files\n\nThe change improves Django's ORM by allowing more complex query patterns involving tuples and subqueries, particularly useful for composite key relationships and complex filtering scenarios.\n\nImpact: This is a feature enhancement that maintains backward compatibility while adding new querying capabilities.",
+    "url": "https://github.com/django/django/commit/41239fe34d64e801212dccaa4585e4802d0fac68",
+    "date": "2025-01-28T04:10:13+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "41239fe34d64e801212dccaa4585e4802d0fac68"
+  },
+  "0597e8ad1e55b565292ead732916aa0e39bdf37b": {
+    "summary": "This commit fixes issue #35515, which addresses the verbose output formatting in Django's shell command when auto-importing objects. The main changes are:\n\n1. Modified the shell command output to correctly handle cases when importing 0 or 1 object\n2. Updated `shell.py` with improved output formatting\n3. Added significant test coverage (39 new lines) to verify the fix\n\nThe change appears to be a user experience improvement for Django's shell command output messages, ensuring grammatically correct messages when dealing with singular or zero cases. Co-authored by Salvo Polizzi.",
+    "url": "https://github.com/django/django/commit/0597e8ad1e55b565292ead732916aa0e39bdf37b",
+    "date": "2025-02-07T18:25:23+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "0597e8ad1e55b565292ead732916aa0e39bdf37b"
+  },
+  "44ccd20375ba0d4da869ef994bc10a2311e9dc88": {
+    "summary": "This commit refactors the internal `get_and_report_namespace` function in Django's shell command implementation. The changes affect two files:\n\n1. `shell.py`: Simplified the function by reducing code (14 lines removed, 6 added)\n2. `tests.py`: Updated and expanded test coverage (10 lines added, 6 removed)\n\nThe commit references issue #35515 and appears to be a code cleanup/optimization effort for Django's shell command functionality. The changes maintain the same functionality while making the code more concise and better tested.",
+    "url": "https://github.com/django/django/commit/44ccd20375ba0d4da869ef994bc10a2311e9dc88",
+    "date": "2025-02-07T17:18:54+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "44ccd20375ba0d4da869ef994bc10a2311e9dc88"
+  },
+  "3839afb63ad5183cdf08e06e3a43a014ca4b7263": {
+    "summary": "This commit adds documentation for the `--no-imports` flag in Django's shell command, addressing issue #35515. The change only affects the django-admin documentation file, adding 6 new lines to explain this command-line option. This appears to be a documentation-only update to cover previously undocumented functionality.",
+    "url": "https://github.com/django/django/commit/3839afb63ad5183cdf08e06e3a43a014ca4b7263",
+    "date": "2025-02-07T17:12:43+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "3839afb63ad5183cdf08e06e3a43a014ca4b7263"
+  },
+  "ca0794fa32b64ee42e9dce6df967777cb6347483": {
+    "summary": "This commit makes a purely formatting change to the documentation file \"docs/howto/custom-shell.txt\". The author (Natalia) wrapped text lines at 79 columns, which is a common PEP 8 style guideline for Python projects. This is a code style improvement that doesn't affect the content of the documentation, only its formatting.\n\nThe change affected 6 lines total (3 additions, 3 deletions), suggesting simple line wrapping adjustments.",
+    "url": "https://github.com/django/django/commit/ca0794fa32b64ee42e9dce6df967777cb6347483",
+    "date": "2025-02-07T17:12:07+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "ca0794fa32b64ee42e9dce6df967777cb6347483"
+  },
+  "0dc61495b2217e9c5a872ac967dfcf197d342c84": {
+    "summary": "This commit modifies the Django release documentation to explicitly specify the \"django\" repository when using the twine command. The change was necessary to support users who have multiple project-specific PyPI tokens configured in their `.pypirc` file. This is a follow-up to a previous commit (26aedb...) and involves a single line change in the release how-to document.\n\nKey points:\n- Modified: docs/internals/howto-release-django.txt\n- Purpose: Support multi-token PyPI configurations\n- Change: Added explicit \"django\" repository specification to twine command",
+    "url": "https://github.com/django/django/commit/0dc61495b2217e9c5a872ac967dfcf197d342c84",
+    "date": "2025-02-11T01:53:31+00:00",
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com"
+    },
+    "sha": "0dc61495b2217e9c5a872ac967dfcf197d342c84"
+  },
+  "4a3ad9eebbc16ce80b348644b557c84ecc741be7": {
+    "summary": "Summary:\nThis commit enables native tuple comparison lookups for SQLite 3.37+ and Oracle 23.4+. The change addresses GitHub issue #36148 and improves database query handling for tuple comparisons.\n\nKey Changes:\n- Removed requirement to explicitly specify VALUES when declaring tuple sequences on SQLite 3.37+\n- Added support for native tuple comparisons on Oracle 23.4+\n- Modified tuple lookup handling in Django's database layer\n\nThe update leverages improvements in newer database versions, specifically referencing a SQLite change (sqlite/sqlite@9289f51) that fixed IN clause handling for tuples.",
+    "url": "https://github.com/django/django/commit/4a3ad9eebbc16ce80b348644b557c84ecc741be7",
+    "date": "2025-01-28T20:04:14+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "4a3ad9eebbc16ce80b348644b557c84ecc741be7"
+  },
+  "a0a765ddeb5056c85e084773d3f6432e2a426638": {
+    "summary": "This commit modifies Django's database tuple lookups functionality by introducing a feature switch system. The key changes are:\n\n1. Added a feature flag in the database backend system to control tuple lookup support\n2. Modified how Oracle and SQLite backends declare their tuple lookup capabilities\n3. Refactored the tuple lookups implementation (29 additions, 20 deletions)\n\nThe purpose is to make it easier for database backends to opt in/out of native tuple lookup support, with a fallback mechanism available when native support isn't present. This change relates to issue #36148.\n\nThe most significant changes are in the tuple_lookups.py file, suggesting a substantial rework of the underlying implementation to accommodate this new feature switch approach.",
+    "url": "https://github.com/django/django/commit/a0a765ddeb5056c85e084773d3f6432e2a426638",
+    "date": "2025-01-27T20:11:19+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "a0a765ddeb5056c85e084773d3f6432e2a426638"
+  },
+  "c326cfe3b1683e6c205f53a4ad11feba6623a399": {
+    "summary": "This commit modifies how Tuple compilation is handled in Django's database layer. The change delegates Tuple compilation to the compiler instead of handling it directly via as_sql(). The main purpose is to enable third-party database backends to override Tuple.as_vendor() methods, which wasn't possible before because direct as_sql() calls would bypass these overrides.\n\nThis is a technical improvement that enhances Django's extensibility for custom database backends. The change is related to issue #373 and involves minimal code changes (2 additions, 2 deletions) in the tuple_lookups.py file.",
+    "url": "https://github.com/django/django/commit/c326cfe3b1683e6c205f53a4ad11feba6623a399",
+    "date": "2025-02-09T02:05:50+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "c326cfe3b1683e6c205f53a4ad11feba6623a399"
+  },
+  "17160819f3d98a6355bfd608fe756a43cba33343": {
+    "summary": "This commit removes support for MariaDB 10.5 from Django. The changes include:\n\n1. Significant code cleanup in MySQL backend files:\n   - Removed legacy code from `features.py` and `schema.py` that was specific to MariaDB 10.5\n   - Simplified database feature detection and schema operations\n\n2. Documentation updates:\n   - Updated database compatibility documentation\n   - Modified migration operation docs\n   - Added release notes in Django 6.0 documentation about dropping MariaDB 10.5 support\n\n3. Minor test adjustments to reflect the removal of MariaDB 10.5 support\n\nThe commit appears to be part of Django's version compatibility updates, likely to maintain support for only more recent database versions.\n\nIssue reference: #36105",
+    "url": "https://github.com/django/django/commit/17160819f3d98a6355bfd608fe756a43cba33343",
+    "date": "2025-02-09T11:57:40+00:00",
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com"
+    },
+    "sha": "17160819f3d98a6355bfd608fe756a43cba33343"
+  },
+  "0bac41fc7e4a842e8d20319cba31cc645501c245": {
+    "summary": "Summary:\nRemoved the `get_refs()` method from the `In` lookup class in Django's database models. This method became redundant after improvements to `In.get_source_expression()` (from issue #36025) which now properly handles right-hand-side expressions, making the specialized reference gathering unnecessary. This change simplifies the code by removing 8 lines without affecting functionality.\n\nRelated issues: #34975, #36025",
+    "url": "https://github.com/django/django/commit/0bac41fc7e4a842e8d20319cba31cc645501c245",
+    "date": "2024-12-23T04:23:28+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "0bac41fc7e4a842e8d20319cba31cc645501c245"
+  },
+  "089deb82b9ac2d002af36fd36f288368cdac4b53": {
+    "summary": "This commit fixes a bug (#36025) in Django related to how iterable lookups (specifically 'in' and 'range' operators) handle their right-hand side expressions during re-aliasing.\n\nKey changes:\n- Fixed how `Lookup` expressions handle resolvable right-hand side values in iterable contexts\n- Modified `FieldGetDbPrepValueIterableMixin` to properly handle resolvable values during the resolving phase\n- Added test coverage to verify the fix\n\nThe bug occurred because `get_source_expressions` wasn't returning all resolvable expressions for Lookup operations with \"direct\" right-hand sides. This particularly affected cases where the right-hand side was an iterable.\n\nThe fix focuses specifically on 'In' and 'Range' lookups rather than attempting a larger refactor of the Lookup interface. Test files were updated to verify the fix works as intended.",
+    "url": "https://github.com/django/django/commit/089deb82b9ac2d002af36fd36f288368cdac4b53",
+    "date": "2024-12-23T04:00:04+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "089deb82b9ac2d002af36fd36f288368cdac4b53"
+  },
+  "b13b8684a04d0bc1081104c5973c62c27dc673b0": {
+    "summary": "This commit fixes issue #36061 by adding migration support for the `through_fields` parameter in Django's ManyToManyField. Specifically:\n\n- Added `through_fields` to ManyToManyField's `deconstruct()` method, enabling proper migration handling\n- Added tests to verify the deconstruction behavior\n- Updated AUTHORS file to credit the contributor\n- The change was reviewed by Simon Charette\n\nThis enhancement allows Django's migration system to properly handle ManyToManyFields that use custom intermediate tables with specified through_fields.",
+    "url": "https://github.com/django/django/commit/b13b8684a04d0bc1081104c5973c62c27dc673b0",
+    "date": "2025-01-07T01:50:44+00:00",
+    "author": {
+      "name": "brian",
+      "email": "bdnettleton@gmail.com"
+    },
+    "sha": "b13b8684a04d0bc1081104c5973c62c27dc673b0"
+  },
+  "2598b371a93e21d84b7a2a99b2329535c8c0c138": {
+    "summary": "This commit fixes issue #35677 in Django, addressing a bug in the prefetch_related functionality for many-to-many relationships. Here's the key points:\n\n1. Problem: The `_next_is_sticky()` call wasn't working as intended for prefetched many-to-many relationships, as it became a no-op when filtering was applied.\n\n2. Solution: Modified the code to allow reuse of pre-existing JOINs when applying annotations and filters to prefetched querysets, making it consistent with how related filters work in related managers.\n\n3. Changes:\n- Modified related descriptors and SQL query handling\n- Added significant test coverage (43 new lines)\n- Made the behavior more consistent with related manager filtering\n\nThe fix ensures proper filtering behavior when using prefetch_related with many-to-many relationships, improving query consistency and correctness.",
+    "url": "https://github.com/django/django/commit/2598b371a93e21d84b7a2a99b2329535c8c0c138",
+    "date": "2025-01-14T05:18:30+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "2598b371a93e21d84b7a2a99b2329535c8c0c138"
+  },
+  "db7b1ae9f6d9e26facbb3da4cf5f5a513704bfe5": {
+    "summary": "Summary:\nThis commit addresses issue #22997 in Django by preventing the system from requesting default values for auto fields during migrations. The change was made in the migrations autodetector module and includes corresponding test cases. The modification appears to be a bugfix to improve how Django handles automatic fields (like auto-incrementing IDs) during database migrations.\n\nChanges:\n- Modified: `autodetector.py` (+2 lines)\n- Added tests: `test_autodetector.py` (+28 lines)\n- No code was removed\n\nThe commit focuses on migration behavior improvement, specifically around auto fields' default value handling.",
+    "url": "https://github.com/django/django/commit/db7b1ae9f6d9e26facbb3da4cf5f5a513704bfe5",
+    "date": "2024-10-02T21:05:33+00:00",
+    "author": {
+      "name": "Ben Cail",
+      "email": "bcail@crossway.org"
+    },
+    "sha": "db7b1ae9f6d9e26facbb3da4cf5f5a513704bfe5"
+  },
+  "1f33f21fca60c3839bcfc756900fb78bcfd15cc3": {
+    "summary": "Summary:\nFixed a bug in Django's PostgreSQL schema editor where the `_delete_index_sql()` method wasn't properly respecting its \"sql\" parameter. The fix involved modifying the PostgreSQL schema code and adding test coverage (24 new test lines). This addresses GitHub issue #36165 and builds upon a previous commit (bd366ca).\n\nKey Changes:\n- Modified `postgresql/schema.py` with a 1-line change to handle SQL parameter correctly\n- Added comprehensive test coverage in `postgres_tests/test_indexes.py`\n- Bug was reported by Daniel Finch\n\nThis appears to be a small but important fix for PostgreSQL index deletion functionality in Django.",
+    "url": "https://github.com/django/django/commit/1f33f21fca60c3839bcfc756900fb78bcfd15cc3",
+    "date": "2025-02-05T15:08:44+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "1f33f21fca60c3839bcfc756900fb78bcfd15cc3"
+  },
+  "e2a8f4dac8ed2b3667a4367756043b1e119f4ce2": {
+    "summary": "This commit adds placeholder (stub) release notes for Django version 5.1.7. The changes involve:\n1. Creating a new release notes file (5.1.7.txt) with 12 new lines\n2. Adding a reference to 5.1.7 in the release notes index file\n\nThis is a standard documentation preparation step that typically occurs before a new Django release, setting up the structure for documenting changes, bug fixes, and features that will be included in version 5.1.7.",
+    "url": "https://github.com/django/django/commit/e2a8f4dac8ed2b3667a4367756043b1e119f4ce2",
+    "date": "2025-02-05T14:21:09+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "e2a8f4dac8ed2b3667a4367756043b1e119f4ce2"
+  },
+  "294cc965efe0dfc8457aa5a8e78cb6d53abfcf92": {
+    "summary": "This commit updates the release documentation for three Django versions (5.1.6, 5.0.12, and 4.2.19) by adding their release dates. The changes are minimal, with one line modified in each release notes file. This is a standard documentation update to record when these versions were officially released.",
+    "url": "https://github.com/django/django/commit/294cc965efe0dfc8457aa5a8e78cb6d53abfcf92",
+    "date": "2025-02-05T13:38:24+00:00",
+    "author": {
+      "name": "Natalia",
+      "email": "124304+nessita@users.noreply.github.com"
+    },
+    "sha": "294cc965efe0dfc8457aa5a8e78cb6d53abfcf92"
+  },
+  "5da3ad7bf90fba7321f4c2834db44aa920c70bc7": {
+    "summary": "This commit updates the documentation for Django's UserManager.create_user() method, specifically clarifying how the default email value is handled. The change only affects the auth.txt documentation file, adding 3 new lines without removing any existing content. The update was made by amirreza sohrabi far to provide better clarity for developers about email handling during user creation.\n\nKey points:\n- Documentation-only change\n- Focuses on email default value behavior in create_user()\n- Adds clarification without removing existing docs",
+    "url": "https://github.com/django/django/commit/5da3ad7bf90fba7321f4c2834db44aa920c70bc7",
+    "date": "2025-02-04T19:35:07+00:00",
+    "author": {
+      "name": "amirreza sohrabi far",
+      "email": "119850973+amirreza8002@users.noreply.github.com"
+    },
+    "sha": "5da3ad7bf90fba7321f4c2834db44aa920c70bc7"
+  },
+  "1759c1dbd1e3cd4c9fcd345269e0d25796468f7f": {
+    "summary": "Summary:\nThe commit deprecates the `OrderableAggMixin` class in Django's contrib.postgres module (issue #35444). No functional changes were made, but warning messages were added to notify developers that this class will be removed in a future version. The changes include:\n\n- Adding deprecation warnings to the mixin class\n- Updating documentation to reflect the deprecation\n- Adding the change to Django 6.0's release notes\n\nThis is purely a maintenance change to help developers transition away from using this mixin directly.",
+    "url": "https://github.com/django/django/commit/1759c1dbd1e3cd4c9fcd345269e0d25796468f7f",
+    "date": "2024-08-14T19:54:09+00:00",
+    "author": {
+      "name": "Chris Muthig",
+      "email": "camuthig@gmail.com"
+    },
+    "sha": "1759c1dbd1e3cd4c9fcd345269e0d25796468f7f"
+  },
+  "4b977a5d7283e7ca51288cc0ed0860e0004653ca": {
+    "summary": "This commit addresses issue #35444 by generalizing the `order_by` functionality for aggregate functions in Django's ORM. Here are the key changes:\n\n1. Core Change: Moved PostgreSQL-specific `order_by` behavior from the Postgres aggregates into the base `Aggregate` class, making it available across all database backends.\n\n2. StringAgg Enhancement:\n   - Moved `StringAgg` from Postgres-specific code to the shared aggregates module\n   - Made it work across all database engines\n   - The PostgreSQL `StringAgg` class now just wraps the shared implementation\n\n3. Implementation Details:\n   - Added database feature flags for aggregate ordering support\n   - Updated documentation for new functionality\n   - Added extensive test coverage\n   - Made related adjustments to expressions and models\n\nThe change improves Django's cross-database compatibility by making ordered aggregates available beyond just PostgreSQL, while maintaining backward compatibility.",
+    "url": "https://github.com/django/django/commit/4b977a5d7283e7ca51288cc0ed0860e0004653ca",
+    "date": "2024-12-22T15:30:55+00:00",
+    "author": {
+      "name": "Chris Muthig",
+      "email": "camuthig@gmail.com"
+    },
+    "sha": "4b977a5d7283e7ca51288cc0ed0860e0004653ca"
+  },
+  "6d1cf5375f6fbc1496095d2356357c3b08a46324": {
+    "summary": "This commit by Tim Graham adds heading labels to the Django caching documentation file (cache.txt). The changes were purely documentation-related, adding 10 new lines without removing any existing content. These labels likely improve document structure and navigation within Django's caching documentation.\n\nThe commit appears to be a straightforward documentation enhancement focused on better organization rather than any functional changes.",
+    "url": "https://github.com/django/django/commit/6d1cf5375f6fbc1496095d2356357c3b08a46324",
+    "date": "2025-03-02T18:55:04+00:00",
+    "author": {
+      "name": "Tim Graham",
+      "email": "timograham@gmail.com"
+    },
+    "sha": "6d1cf5375f6fbc1496095d2356357c3b08a46324"
+  },
+  "fc303551077c3e023fe4f9d01fc1b3026c816fa4": {
+    "summary": "This commit fixes issue #36198 in Django, implementing proper resolution of transform expressions in the form F(\"field__transform\") during constraint validation.\n\nKey changes:\n- Modified expression handling in `django/db/models/expressions.py` (18 additions, 1 deletion)\n- Added test cases across multiple test files (53 new test lines total)\n- Enables proper handling of field transforms in F() expressions when validating constraints\n\nThe fix was reported by Tom Hall and includes test contributions from Sarah. The changes primarily focus on expression resolution functionality with minimal impact on existing code.",
+    "url": "https://github.com/django/django/commit/fc303551077c3e023fe4f9d01fc1b3026c816fa4",
+    "date": "2025-02-18T17:43:38+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "fc303551077c3e023fe4f9d01fc1b3026c816fa4"
+  },
+  "ff3aaf036f0cb66cd8f404cd51c603e68aaa7676": {
+    "summary": "This commit updates Django's codebase to comply with Black's 2025 stable style (version 25.1.0). Black is a Python code formatter that enforces a consistent code style.\n\nThe changes are primarily formatting-related, affecting 43 files with minimal functional impact. The majority of changes are in the GIS-related modules (django.contrib.gis), including:\n- GDAL and GEOS modules\n- Database backends (Oracle, PostGIS, SpatiaLite)\n- Various test files\n\nThe modifications mostly involve:\n- Line breaks and indentation adjustments\n- Spacing changes\n- Minor code style standardization\n\nThis is a maintenance commit focused on code style consistency rather than functional changes.",
+    "url": "https://github.com/django/django/commit/ff3aaf036f0cb66cd8f404cd51c603e68aaa7676",
+    "date": "2025-03-01T18:41:37+00:00",
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com"
+    },
+    "sha": "ff3aaf036f0cb66cd8f404cd51c603e68aaa7676"
+  },
+  "ea1e3703bee28bfbe4f32ceb39ad31763353b143": {
+    "summary": "This commit updates Django's release documentation by:\n1. Adding placeholder (stub) release notes for three upcoming versions: 5.1.7, 5.0.13, and 4.2.20\n2. Making minor modifications to existing 5.1.7 release notes\n3. Updating the release documentation index to include the new versions\n\nThe changes are primarily documentation-focused, preparing for future Django releases by setting up the necessary documentation structure. The commit adds new content (indicated by additions only, no deletions) to most files, with only 5.1.7.txt having both additions and deletions.",
+    "url": "https://github.com/django/django/commit/ea1e3703bee28bfbe4f32ceb39ad31763353b143",
+    "date": "2025-02-27T15:03:26+00:00",
+    "author": {
+      "name": "Sarah Boyce",
+      "email": "42296566+sarahboyce@users.noreply.github.com"
+    },
+    "sha": "ea1e3703bee28bfbe4f32ceb39ad31763353b143"
+  },
+  "77666f2fa1ef93f7b7728a565260229918d51532": {
+    "summary": "This commit addresses issue #35617 in Django's test suite, specifically modifying a test case for JSON field bulk updates. The change removes hardcoded primary key values in the `test_bulk_update_custom_get_prep_value()` test function. This is likely a test improvement to make it more robust and less dependent on specific database state. The change affects only one test file (`test_jsonfield.py`) with minor modifications (3 additions, 5 deletions).",
+    "url": "https://github.com/django/django/commit/77666f2fa1ef93f7b7728a565260229918d51532",
+    "date": "2025-02-25T17:23:13+00:00",
+    "author": {
+      "name": "Jacob Walls",
+      "email": "jacobtylerwalls@gmail.com"
+    },
+    "sha": "77666f2fa1ef93f7b7728a565260229918d51532"
+  },
+  "5a1cae3a5675c5733daf5949759476d65aa0e636": {
+    "summary": "This commit removes an outdated docstring from the tests/basic/models.py file in the Django repository. The change was simple - 6 lines were deleted with no new additions, suggesting the removed documentation was no longer relevant or accurate. The cleanup was performed by Clifford Gama on February 25, 2025.",
+    "url": "https://github.com/django/django/commit/5a1cae3a5675c5733daf5949759476d65aa0e636",
+    "date": "2025-02-25T08:39:28+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "cliffygamy@gmail.com"
+    },
+    "sha": "5a1cae3a5675c5733daf5949759476d65aa0e636"
   }
 }

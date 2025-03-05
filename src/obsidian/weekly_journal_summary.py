@@ -85,7 +85,7 @@ def analyze_with_claude(content):
 
     try:
         response = client.messages.create(
-            model="claude-3-5-sonnet-latest",
+            model="claude-3-7-sonnet-latest",
             max_tokens=1000,
             messages=[{"role": "user", "content": [{"type": "text", "text": prompt}]}],
         )
