@@ -1668,5 +1668,315 @@
       "email": "cliffygamy@gmail.com"
     },
     "sha": "5a1cae3a5675c5733daf5949759476d65aa0e636"
+  },
+  "08dae5bd46a02a2e2798028c83d97b1894beffb8": {
+    "summary": "This commit updates Django's internal release documentation to reflect recent changes in the release process on djangoproject.com. Specifically, it documents how the `Release` model now handles artifact uploads and checksum files through the admin site, replacing the previous release workflow. The changes are contained in a single documentation file (`howto-release-django.txt`), with roughly similar numbers of additions and deletions (60 additions, 66 deletions), suggesting a significant revision of the release instructions. This update was made in response to issue #35980.",
+    "url": "https://github.com/django/django/commit/08dae5bd46a02a2e2798028c83d97b1894beffb8",
+    "date": "2025-02-15T12:13:43+00:00",
+    "author": {
+      "name": "Baptiste Mispelon",
+      "email": "bmispelon@gmail.com"
+    },
+    "sha": "08dae5bd46a02a2e2798028c83d97b1894beffb8"
+  },
+  "304e9f3d6ae8387bbfc261d68b51247a1f5230bb": {
+    "summary": "This commit addresses issue #36202 by adding documentation examples for JSONField queries in Django, specifically for the `__contains` and `__contained_by` lookup operations when working with nested arrays. The changes were made to the database queries documentation file (`queries.txt`), adding 12 new lines of content with no deletions. The update helps developers better understand how to perform these JSON field lookups with nested array structures.\n\nThe commit was authored by Clifford Gama and is purely documentation-focused, improving Django's documentation clarity without changing any functional code.",
+    "url": "https://github.com/django/django/commit/304e9f3d6ae8387bbfc261d68b51247a1f5230bb",
+    "date": "2025-03-18T20:54:10+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "53076065+cliff688@users.noreply.github.com"
+    },
+    "sha": "304e9f3d6ae8387bbfc261d68b51247a1f5230bb"
+  },
+  "611e7bc3a0633a35ae3430e359c646e02fa3801d": {
+    "summary": "This commit updates Django's documentation to clarify PostgreSQL's behavior with range fields. Specifically, it documents that PostgreSQL automatically normalizes a range field with no points to an empty range. This addresses GitHub issue #36078.\n\nThe change only affects the documentation file `docs/ref/contrib/postgres/fields.txt`, adding 9 new lines without removing any existing content. The commit was co-authored with Sarah Boyce.\n\nThis is a documentation-only change that helps developers better understand PostgreSQL's automatic normalization behavior for empty ranges.",
+    "url": "https://github.com/django/django/commit/611e7bc3a0633a35ae3430e359c646e02fa3801d",
+    "date": "2025-01-16T12:05:50+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "cliffygamy@gmail.com"
+    },
+    "sha": "611e7bc3a0633a35ae3430e359c646e02fa3801d"
+  },
+  "8f400a7ff086b9ea2a20e69826d211f965b31185": {
+    "summary": "Summary:\nThis commit improves the reliability of Selenium tests by adding proper wait conditions. The changes ensure tests wait for popups to close and pages to fully load before proceeding. The modifications primarily affect admin views tests and widget tests, with the bulk of changes (25 lines) in the admin views test file. This is a test stability improvement that addresses flaky test behavior.\n\nKey Changes:\n- Added wait conditions for popup windows and page loads\n- Modified tests in admin_views/tests.py (16 additions, 9 deletions)\n- Minor updates to widget tests (2 additions, 1 deletion)\n\nPurpose: To reduce test flakiness and increase test reliability.",
+    "url": "https://github.com/django/django/commit/8f400a7ff086b9ea2a20e69826d211f965b31185",
+    "date": "2025-03-13T10:17:17+00:00",
+    "author": {
+      "name": "Sarah Boyce",
+      "email": "42296566+sarahboyce@users.noreply.github.com"
+    },
+    "sha": "8f400a7ff086b9ea2a20e69826d211f965b31185"
+  },
+  "90fc76294808b16a86acc9a073435250466932e3": {
+    "summary": "Summary:\nThis commit refactors Django's email functionality by removing duplicate code between the `mail_admins()` and `mail_managers()` functions. The change addresses issue #36138 and appears to consolidate shared logic between these two admin/manager email notification functions. The modification affects only the mail module initialization file, with a net addition of 16 lines of code, suggesting a more efficient implementation while maintaining the same functionality.\n\nKey Points:\n- Removes code duplication in email functions\n- Affects Django's core mail module\n- References issue #36138\n- Improves code maintainability",
+    "url": "https://github.com/django/django/commit/90fc76294808b16a86acc9a073435250466932e3",
+    "date": "2025-02-14T18:31:44+00:00",
+    "author": {
+      "name": "Mike Edmunds",
+      "email": "medmunds@gmail.com"
+    },
+    "sha": "90fc76294808b16a86acc9a073435250466932e3"
+  },
+  "62ad970c39c067dd30b068cb9ad04a93963bebb4": {
+    "summary": "Summary of changes:\nThis commit improves test coverage for Django's mail_admins() and mail_managers() functions by:\n\n1. Breaking up an existing test (test_connection_arg) into separate test cases for better organization\n2. Adding more test cases to verify behavior with invalid ADMINS/MANAGERS settings\n3. Adding new tests to verify behavior with valid ADMINS/MANAGERS settings\n\nThe changes are focused on test improvements only (in tests/mail/tests.py) and are related to issue #36138. The commit adds 60 lines and removes 21 lines of test code.",
+    "url": "https://github.com/django/django/commit/62ad970c39c067dd30b068cb9ad04a93963bebb4",
+    "date": "2025-02-04T21:32:49+00:00",
+    "author": {
+      "name": "Mike Edmunds",
+      "email": "medmunds@gmail.com"
+    },
+    "sha": "62ad970c39c067dd30b068cb9ad04a93963bebb4"
+  },
+  "6a9db1e626952ffb37633586e6647319ea53467d": {
+    "summary": "This commit addresses issue #34865 in Django, improving memory management in database-related components. The changes:\n\n1. Added explicit memory release mechanisms across multiple database wrapper layers instead of relying solely on garbage collection\n2. Modified 7 database-related files in django/db/backends/base/ and db/utils.py, each with 3 line additions\n3. Added comprehensive tests (31 new lines) to verify the memory management improvements\n4. Updated AUTHORS file to credit contributors\n\nThe main goal was to optimize memory usage by releasing resources earlier rather than waiting for Python's garbage collector. The changes were reviewed and refined with input from Florian Apolloner, Jake Howard, and Patryk Zawadzki.",
+    "url": "https://github.com/django/django/commit/6a9db1e626952ffb37633586e6647319ea53467d",
+    "date": "2025-02-08T13:19:58+00:00",
+    "author": {
+      "name": "fowczrek",
+      "email": "f.a.owczarek@gmail.com"
+    },
+    "sha": "6a9db1e626952ffb37633586e6647319ea53467d"
+  },
+  "e804a07d76fc85468f27f7130ae1442fabcd650d": {
+    "summary": "This commit fixes issue #36252 in Django, addressing duplicate automatic imports in the shell command. The changes span three files:\n\n1. Modified the shell command implementation (`shell.py`)\n2. Updated shell documentation (`custom-shell.txt`)\n3. Added new test cases (`tests.py`)\n\nThe fix appears to handle cases where automatic imports were being duplicated when using Django's shell command. The addition of 5 new test lines without any deletions suggests new test coverage was added to verify the fix.\n\nThis is a focused bugfix that improves the Django shell's import behavior while maintaining backward compatibility.",
+    "url": "https://github.com/django/django/commit/e804a07d76fc85468f27f7130ae1442fabcd650d",
+    "date": "2025-03-14T13:16:38+00:00",
+    "author": {
+      "name": "hesham942",
+      "email": "heshamhatem2004@gmail.com"
+    },
+    "sha": "e804a07d76fc85468f27f7130ae1442fabcd650d"
+  },
+  "1823a8011346afc280e0efaf8cb7c086b148f881": {
+    "summary": "Summary:\nThis commit fixes issue #33537 in Django, improving how test database cloning works with MySQL. The main change ensures that unexpected errors during database cloning are properly re-raised instead of being silently handled. The update includes both implementation changes in the MySQL backend creation code and significant additions to the test suite to verify the behavior.\n\nKey Changes:\n- Modified MySQL database creation logic to better handle error cases\n- Added extensive test coverage (47 new lines of tests)\n- Improved error handling transparency during test database cloning\n\nThe fix was a collaborative effort, with initial work by Faakhir Zahid and Stephen Finucane, reviewed by Simon Charette, and committed by Mariusz Felisiak.",
+    "url": "https://github.com/django/django/commit/1823a8011346afc280e0efaf8cb7c086b148f881",
+    "date": "2024-09-18T16:18:54+00:00",
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com"
+    },
+    "sha": "1823a8011346afc280e0efaf8cb7c086b148f881"
+  },
+  "ef6a83789b310a441237a190a493c9586a4cb260": {
+    "summary": "This commit fixes a grammatical issue (pronoun disagreement) in Django's queryset documentation file (docs/ref/models/querysets.txt). The change was made by Clifford Gama to improve the documentation's clarity and correctness. It's a small documentation-only change, modifying 3 lines of text.",
+    "url": "https://github.com/django/django/commit/ef6a83789b310a441237a190a493c9586a4cb260",
+    "date": "2025-03-07T07:34:40+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "cliffygamy@gmail.com"
+    },
+    "sha": "ef6a83789b310a441237a190a493c9586a4cb260"
+  },
+  "3235e76eb50be20756f82cb3bbe8e32cc586f7bb": {
+    "summary": "This commit updates the documentation for Django's querysets, specifically correcting an example related to aggregation in the docs/ref/models/querysets.txt file. The changes appear to be focused on improving accuracy in the documentation rather than changing functionality. The commit was made by Clifford Gama and modified 8 lines (4 additions, 4 deletions) in a single file.\n\nWithout access to the actual content changes, I can't specify exactly what was corrected in the aggregation example, but it was likely fixing incorrect syntax or clarifying the usage of Django's aggregation features.",
+    "url": "https://github.com/django/django/commit/3235e76eb50be20756f82cb3bbe8e32cc586f7bb",
+    "date": "2025-03-06T21:29:21+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "cliffygamy@gmail.com"
+    },
+    "sha": "3235e76eb50be20756f82cb3bbe8e32cc586f7bb"
+  },
+  "efe3ca09e029c63e25f6e19843cb0c68cc7fa816": {
+    "summary": "This commit fixes documentation formatting issues across multiple Django documentation files, specifically addressing incorrect formatting of inline pluralized code references. The changes span 11 different documentation files, primarily in the reference and topics sections.\n\nThe main changes appear to be consistent formatting corrections rather than content changes, with the largest updates occurring in:\n- tutorial05.txt (17 additions, 16 deletions)\n- querysets.txt (10 additions, 10 deletions)\n- many_to_many.txt (8 additions, 6 deletions)\n\nThis is primarily a documentation cleanup commit focused on maintaining consistent formatting standards throughout Django's documentation, particularly for code references that appear in plural form within the text.",
+    "url": "https://github.com/django/django/commit/efe3ca09e029c63e25f6e19843cb0c68cc7fa816",
+    "date": "2025-03-13T18:18:35+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "53076065+cliff688@users.noreply.github.com"
+    },
+    "sha": "efe3ca09e029c63e25f6e19843cb0c68cc7fa816"
+  },
+  "e7a9d756eedd0317132c81c3695d4a34bba5dcd3": {
+    "summary": "This commit fixes a test case related to pagination warnings in Django (issue #35945). The specific test `test_paginating_unordered_queryset_raises_warning_async()` was failing when Django was byte-compiled. The changes were made to the pagination test file, with 6 lines added and 1 line removed. The fix appears to be focused on ensuring the test works correctly in all Django execution environments, particularly when the code is byte-compiled.",
+    "url": "https://github.com/django/django/commit/e7a9d756eedd0317132c81c3695d4a34bba5dcd3",
+    "date": "2025-03-13T10:06:44+00:00",
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com"
+    },
+    "sha": "e7a9d756eedd0317132c81c3695d4a34bba5dcd3"
+  },
+  "e03440291b0599934da73b7dfbd2ccf7ec7270d8": {
+    "summary": "This commit fixes a typo in Django's database queries documentation (docs/topics/db/queries.txt). It's a simple documentation correction that addresses issue #36249. The change involves one line replacement, likely fixing a spelling or grammatical error. The commit was made by hesham hatem on March 12, 2025.",
+    "url": "https://github.com/django/django/commit/e03440291b0599934da73b7dfbd2ccf7ec7270d8",
+    "date": "2025-03-12T21:09:04+00:00",
+    "author": {
+      "name": "hesham hatem",
+      "email": "80004117+Hesham942@users.noreply.github.com"
+    },
+    "sha": "e03440291b0599934da73b7dfbd2ccf7ec7270d8"
+  },
+  "27b68bcadf1ab2e9f7fd223aed42db352ccdc62d": {
+    "summary": "This commit fixes issue #36234 by restoring the `single_object` argument to the `LogEntry.objects.log_actions()` method in Django's admin interface. This was a regression introduced in a previous commit (c09bceef6).\n\nKey changes:\n- Modified admin models and options to restore the `single_object` functionality\n- Updated documentation in the 5.1.8 release notes\n- Added significant test coverage (48 new lines) to verify the fix\n- The fix was contributed by Adam Johnson and reviewed by Sarah Boyce\n\nThe change appears to be a backwards compatibility fix, ensuring that code relying on the `single_object` argument continues to work as expected.",
+    "url": "https://github.com/django/django/commit/27b68bcadf1ab2e9f7fd223aed42db352ccdc62d",
+    "date": "2025-03-12T11:05:50+00:00",
+    "author": {
+      "name": "Adam Johnson",
+      "email": "me@adamj.eu"
+    },
+    "sha": "27b68bcadf1ab2e9f7fd223aed42db352ccdc62d"
+  },
+  "ed984f2ac4923d6bc625adb4e8d9146765a02ab1": {
+    "summary": "This commit updates the Django documentation to correctly reflect that the default URL scheme for URLField is \"https\" rather than \"http\". This was a documentation fix that was missed in a previous commit (9a3f86e). The change aligns with issue #34380 and only affects the forms/fields documentation file.\n\nThe update is a simple but important correction to ensure the documentation accurately reflects the actual behavior of URLField's default scheme.",
+    "url": "https://github.com/django/django/commit/ed984f2ac4923d6bc625adb4e8d9146765a02ab1",
+    "date": "2025-03-12T14:00:32+00:00",
+    "author": {
+      "name": "Sarah Boyce",
+      "email": "42296566+sarahboyce@users.noreply.github.com"
+    },
+    "sha": "ed984f2ac4923d6bc625adb4e8d9146765a02ab1"
+  },
+  "c70dbcf8358ca7ff34e76b11dae0740284663911": {
+    "summary": "This commit updates Django's documentation to clarify that `reverse_lazy()` supports query string and URL fragment arguments. The changes are linked to issue #25582 and affect two documentation files:\n\n1. `urlresolvers.txt`: Added details about query/fragment support\n2. `releases/5.2.txt`: Updated release notes for Django 5.2\n\nThe commit improves documentation clarity without changing functionality, as these features were likely already supported but not properly documented.",
+    "url": "https://github.com/django/django/commit/c70dbcf8358ca7ff34e76b11dae0740284663911",
+    "date": "2025-03-12T12:37:30+00:00",
+    "author": {
+      "name": "Adam Johnson",
+      "email": "me@adamj.eu"
+    },
+    "sha": "c70dbcf8358ca7ff34e76b11dae0740284663911"
+  },
+  "955b7c6ba105b328f387a9d63540dbabd4a05828": {
+    "summary": "This commit removed 3 duplicate entries from Django's release notes for version 5.2 (docs/releases/5.2.txt). The change was made by Hisham Mahmood to clean up documentation redundancy. No new content was added, only duplicate content was removed.",
+    "url": "https://github.com/django/django/commit/955b7c6ba105b328f387a9d63540dbabd4a05828",
+    "date": "2025-03-11T17:05:16+00:00",
+    "author": {
+      "name": "Hisham Mahmood",
+      "email": "hishammahmood41@gmail.com"
+    },
+    "sha": "955b7c6ba105b328f387a9d63540dbabd4a05828"
+  },
+  "2ae3044d9d4dfb8371055513e440e0384f211963": {
+    "summary": "This commit adds async support to Django's Paginator class, addressing issue #35945. The changes include:\n\n1. Major updates to `paginator.py` with 266 new lines, likely implementing the async interface\n2. New documentation in `paginator.txt` explaining the async functionality\n3. Release notes updated for Django 6.0 to document this feature\n4. Significant test coverage added (444 new lines in tests.py)\n5. Minor updates to custom pagination implementation\n6. Author added to AUTHORS file\n\nThe commit represents a substantial enhancement to Django's pagination system, making it compatible with async operations while maintaining the existing synchronous interface.\n\nThe large number of changes to tests suggests thorough validation of both async and sync functionality.",
+    "url": "https://github.com/django/django/commit/2ae3044d9d4dfb8371055513e440e0384f211963",
+    "date": "2025-03-11T15:53:04+00:00",
+    "author": {
+      "name": "wookkl",
+      "email": "wjddnr315@gmail.com"
+    },
+    "sha": "2ae3044d9d4dfb8371055513e440e0384f211963"
+  },
+  "0ebea6e5c07485a36862e9b6e2be18d1694ad2c5": {
+    "summary": "This commit fixes issue #35676 in Django, addressing validation of constraints that reference InlineForeignKeyFields in BaseModelForm.\n\nKey changes:\n- Enhanced BaseModelForm to properly validate model constraints involving InlineForeignKeyFields\n- Added significant test coverage (73 new test lines across two test files)\n- Updated documentation to reflect the new validation behavior\n- Added new model definitions for testing purposes\n- Made minimal changes to existing form handling code (23 additions, 5 deletions in models.py)\n\nThe change appears to be a bugfix that improves form validation when dealing with inline foreign key relationships, with extensive testing added to verify the fix. The work was co-authored with Simon Charette.",
+    "url": "https://github.com/django/django/commit/0ebea6e5c07485a36862e9b6e2be18d1694ad2c5",
+    "date": "2025-03-08T13:46:58+00:00",
+    "author": {
+      "name": "Clifford Gama",
+      "email": "cliffygamy@gmail.com"
+    },
+    "sha": "0ebea6e5c07485a36862e9b6e2be18d1694ad2c5"
+  },
+  "5183f7c287a9a5d61ca1103b55166cda52d9c647": {
+    "summary": "Summary:\nThis commit fixes issue #35816 in Django's template language (DTL) to properly handle scientific notation in numeric values. The changes were made in two parts:\n\n1. Modified `django/template/base.py` to improve FilterExpression's parsing of scientific notation numbers\n2. Added extensive test coverage (68 new lines) in `test_parser.py` to verify the functionality\n\nThe fix addresses a specific bug where the Django Template Language wasn't correctly parsing numbers in scientific notation format (like 1e-10). The commit was co-authored with Sarah Boyce.\n\nKey changes: Number parsing logic update and comprehensive test suite addition.",
+    "url": "https://github.com/django/django/commit/5183f7c287a9a5d61ca1103b55166cda52d9c647",
+    "date": "2025-03-11T07:02:27+00:00",
+    "author": {
+      "name": "haileyajohnson",
+      "email": "haj022@ucsd.edu"
+    },
+    "sha": "5183f7c287a9a5d61ca1103b55166cda52d9c647"
+  },
+  "8df5ce80d26824ce72af41edc03275d435de9432": {
+    "summary": "This commit addresses issue #36177 by adding trailing newlines to JSON serializer output in Django. The changes include:\n\n1. Modified `django/core/serializers/json.py` to ensure JSON output ends with a newline\n2. Updated multiple JSON fixture files across test directories to include trailing newlines\n3. Removed 5 lines from `.editorconfig`\n4. Updated documentation in `docs/releases/6.0.txt` to reflect the change\n5. Modified serializer tests to verify the new behavior\n\nThe primary purpose was to make Django's JSON serialization output more consistent with common text file conventions where files should end with a newline character. This is a relatively small but standardizing change affecting many test fixtures.",
+    "url": "https://github.com/django/django/commit/8df5ce80d26824ce72af41edc03275d435de9432",
+    "date": "2025-03-11T07:01:06+00:00",
+    "author": {
+      "name": "Tom Carrick",
+      "email": "tom@carrick.eu"
+    },
+    "sha": "8df5ce80d26824ce72af41edc03275d435de9432"
+  },
+  "ab148c02cedbac492f29930dcd5346e1af052635": {
+    "summary": "This commit addresses issue #33579 by introducing a specialized exception for forced update failures in Django. Here's the key changes:\n\n1. Main Change: Replaced generic DatabaseError with a new specialized exception when forced updates result in no affected rows\n\n2. Purpose: Makes it easier for developers to:\n   - Distinguish between different types of database errors\n   - Handle forced update failures specifically\n   - Convert update failures to appropriate responses (like 404s)\n\n3. Implementation:\n   - Added new exception class in core/exceptions.py\n   - Updated models/base.py with new exception handling logic\n   - Added comprehensive documentation across multiple files\n   - Added new test cases to verify the behavior\n\nThe change improves error handling granularity and makes it easier for developers to handle forced update edge cases appropriately.",
+    "url": "https://github.com/django/django/commit/ab148c02cedbac492f29930dcd5346e1af052635",
+    "date": "2025-03-09T11:04:16+00:00",
+    "author": {
+      "name": "Simon Charette",
+      "email": "charette.s@gmail.com"
+    },
+    "sha": "ab148c02cedbac492f29930dcd5346e1af052635"
+  },
+  "c1257350ca118868bdfc867926dffad38b215162": {
+    "summary": "This commit fixes issue #36222 in Django, addressing a crash that occurred during ExclusionConstraint validation when excluded fields were present in conditions. The changes include:\n\n1. Added validation logic in postgres/constraints.py (5 lines added)\n2. Added test cases to verify the fix (11 lines added)\n3. Updated AUTHORS file to include contributor\n\nThe fix appears to be focused on handling edge cases in PostgreSQL's exclusion constraints implementation within Django's ORM. The validation now properly handles fields that are both excluded and used in conditions.",
+    "url": "https://github.com/django/django/commit/c1257350ca118868bdfc867926dffad38b215162",
+    "date": "2025-03-10T13:55:05+00:00",
+    "author": {
+      "name": "saJaeHyukc",
+      "email": "wogur981208@gmail.com"
+    },
+    "sha": "c1257350ca118868bdfc867926dffad38b215162"
+  },
+  "e44e8327d3d88d86895735c0e427102063ff5b55": {
+    "summary": "This commit modifies Django's constraint validation logic by implementing the `_expression_refs_exclude()` hook in both `CheckConstraint` and `UniqueConstraint` validation methods. The change affects a single file (constraints.py) with minor code adjustments (20 additions, 18 deletions).\n\nThe purpose appears to be standardizing how expression references are handled during constraint validation, likely improving code consistency and reusability by using an existing hook rather than custom logic.\n\nThis is primarily a refactoring change that modifies implementation details while maintaining the same functionality.",
+    "url": "https://github.com/django/django/commit/e44e8327d3d88d86895735c0e427102063ff5b55",
+    "date": "2025-03-09T18:14:51+00:00",
+    "author": {
+      "name": "Mariusz Felisiak",
+      "email": "felisiak.mariusz@gmail.com"
+    },
+    "sha": "e44e8327d3d88d86895735c0e427102063ff5b55"
+  },
+  "f480d5d3ed8234aea876f7eaf8a9154e5bf09d16": {
+    "summary": "This commit fixes issue #36201 in Django, addressing error handling in ModelChoiceField and ModelMultipleChoiceField's clean() methods. The changes add proper ValidationError catching functionality.\n\nThe changes span two files:\n1. `django/forms/models.py`: Modified error handling logic (7 additions, 2 deletions)\n2. `tests/model_forms/test_uuid.py`: Added test coverage (10 additions, 1 deletion)\n\nThe commit appears to improve form field validation by properly catching and handling ValidationErrors that occur during the cleaning process of model choice fields.",
+    "url": "https://github.com/django/django/commit/f480d5d3ed8234aea876f7eaf8a9154e5bf09d16",
+    "date": "2025-03-08T15:42:16+00:00",
+    "author": {
+      "name": "saJaeHyukc",
+      "email": "wogur981208@gmail.com"
+    },
+    "sha": "f480d5d3ed8234aea876f7eaf8a9154e5bf09d16"
+  },
+  "9120a19c4ecb643111b073dd1069e6b410a03c23": {
+    "summary": "This commit updates Django's documentation to clarify that Q objects can be used directly in annotations. The changes include:\n\n1. Added documentation in `querysets.txt` explaining Q object usage in annotations (8 lines added, 4 removed)\n2. Added the contributor (samruddhiDharankar) to the AUTHORS file\n\nThe commit addresses GitHub issue #36066 and improves documentation clarity around a specific QuerySet feature. This is a documentation-only change with no code modifications.",
+    "url": "https://github.com/django/django/commit/9120a19c4ecb643111b073dd1069e6b410a03c23",
+    "date": "2025-03-01T22:53:20+00:00",
+    "author": {
+      "name": "samruddhiDharankar",
+      "email": "samruddhee.dharankar@gmail.com"
+    },
+    "sha": "9120a19c4ecb643111b073dd1069e6b410a03c23"
+  },
+  "8713e4ae96817a0c7be3f7a8fee25a7c7f819721": {
+    "summary": "This commit updates Django's documentation to address issue #33497, adding important guidance about persistent database connections in ASGI and async environments. The changes were made to two documentation files:\n\n1. `databases.txt`: Added documentation about database connection handling\n2. `async.txt`: Added warnings about persistent connections in async contexts\n\nThe key message is that persistent database connections should be disabled when using ASGI or async modes in Django. This is an important configuration note for developers using Django in async environments.\n\nThe commit was authored by Carlton Gibson and only adds documentation (9 lines added, 0 removed).",
+    "url": "https://github.com/django/django/commit/8713e4ae96817a0c7be3f7a8fee25a7c7f819721",
+    "date": "2025-03-13T09:23:00+00:00",
+    "author": {
+      "name": "Carlton Gibson",
+      "email": "carlton.gibson@noumenal.es"
+    },
+    "sha": "8713e4ae96817a0c7be3f7a8fee25a7c7f819721"
+  },
+  "0dcc4a1dbc56b1f3aef9be749aff96a85ca92721": {
+    "summary": "This commit modifies the `.gitattributes` file to make GitHub recognize HTML files as Django templates for syntax highlighting purposes. The change was made by Adam Johnson and adds 2 new lines without removing any existing ones. This is a developer experience improvement that will make Django template files more readable when viewed on GitHub.",
+    "url": "https://github.com/django/django/commit/0dcc4a1dbc56b1f3aef9be749aff96a85ca92721",
+    "date": "2025-03-18T14:30:52+00:00",
+    "author": {
+      "name": "Adam Johnson",
+      "email": "me@adamj.eu"
+    },
+    "sha": "0dcc4a1dbc56b1f3aef9be749aff96a85ca92721"
+  },
+  "afbb8c709d40e77b3f71c152d363c5ad95ceec2d": {
+    "summary": "This commit updates Django's admin test suite to handle a WebDriverException that occurs with Chrome driver version 113 and newer. The changes were made to `django/contrib/admin/tests.py`, adding 9 lines and removing 1 line. The modification appears to be a compatibility fix to ensure tests run properly with newer versions of Chrome's WebDriver.\n\nThe commit addresses a specific browser automation issue that emerged with Chrome driver updates, suggesting it's a maintenance update to keep Django's testing infrastructure current with browser technologies.",
+    "url": "https://github.com/django/django/commit/afbb8c709d40e77b3f71c152d363c5ad95ceec2d",
+    "date": "2025-03-13T11:03:56+00:00",
+    "author": {
+      "name": "Sarah Boyce",
+      "email": "42296566+sarahboyce@users.noreply.github.com"
+    },
+    "sha": "afbb8c709d40e77b3f71c152d363c5ad95ceec2d"
+  },
+  "30e0a43937e685083fa1210c3594678a3b813806": {
+    "summary": "This commit fixes issue #36254 by correcting template dictionary unpacking syntax in Django's timezone documentation (docs/topics/i18n/timezones.txt). The change is minimal, involving just one line replacement. This appears to be a documentation-only fix to ensure the example code correctly demonstrates template dictionary usage in the context of timezone handling.",
+    "url": "https://github.com/django/django/commit/30e0a43937e685083fa1210c3594678a3b813806",
+    "date": "2025-03-14T09:20:34+00:00",
+    "author": {
+      "name": "YQ",
+      "email": "tinyaoqi@gmail.com"
+    },
+    "sha": "30e0a43937e685083fa1210c3594678a3b813806"
   }
 }

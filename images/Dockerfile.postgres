@@ -6,7 +6,7 @@ ARG POSTGRES_VERSION
 
 RUN apt-get update && \
     apt-mark hold locales && \
-    apt-get install -y git build-essential postgresql-server-dev-${POSTGRES_VERSION}
+    apt-get install -y git build-essential postgresql-server-dev-${POSTGRES_VERSION} postgresql-contrib-${POSTGRES_VERSION}
 
 RUN cd /tmp && \
     git clone --branch v0.8.0 https://github.com/pgvector/pgvector.git && \
@@ -20,3 +20,7 @@ RUN rm -rf /tmp/pgvector && \
     apt-get autoremove -y && \
     apt-mark unhold locales && \
     rm -rf /var/lib/apt/lists/*
+
+# Enable pg_stat_statements extension
+RUN echo "shared_preload_libraries = 'pg_stat_statements'" >> /usr/share/postgresql/${POSTGRES_VERSION}/postgresql.conf.sample
+RUN echo "pg_stat_statements.track = all" >> /usr/share/postgresql/${POSTGRES_VERSION}/postgresql.conf.sample

@@ -162,17 +162,36 @@ if __name__ == "__main__":
                     continue
 
                 print(f"Analyzing commit {i}/{len(commits)} ({commit.sha[:7]})")
-                try:
-                    result = analyze_commit(client, commit, repo_url)
-                    summaries[commit.sha] = result
 
-                    # Save after each successful analysis
-                    with open(summaries_file, 'w') as f:
-                        json.dump(summaries, f, indent=2)
-                    print(f"Saved summary to {summaries_file}")
+                # Add retry mechanism for overloaded errors
+                max_retries = 5
+                retry_count = 0
+                retry_delay = 10  # Initial delay in seconds
 
-                except Exception as e:
-                    print(f"Error analyzing commit {commit.sha[:7]}: {str(e)}")
+                while retry_count <= max_retries:
+                    try:
+                        result = analyze_commit(client, commit, repo_url)
+                        summaries[commit.sha] = result
+
+                        # Save after each successful analysis
+                        with open(summaries_file, 'w') as f:
+                            json.dump(summaries, f, indent=2)
+                        print(f"Saved summary to {summaries_file}")
+                        break  # Success, exit retry loop
+
+                    except Exception as e:
+                        error_str = str(e)
+                        if "overloaded_error" in error_str and retry_count < max_retries:
+                            retry_count += 1
+                            actual_delay = retry_delay * retry_count
+                            print(f"Anthropic API overloaded. Retrying in {actual_delay} seconds... (Attempt {retry_count}/{max_retries})")
+                            time.sleep(actual_delay)
+                        else:
+                            print(f"Error analyzing commit {commit.sha[:7]}: {error_str}")
+                            break  # Exit retry loop for other errors or if max retries reached
+
+                if retry_count > max_retries:
+                    print(f"Maximum retries exceeded for commit {commit.sha[:7]}, skipping.")
                     continue
 
             # Update existing_period_summaries with new analyses
