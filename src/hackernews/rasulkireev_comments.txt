@@ -1,0 +1,1155 @@
+Date: 2025-04-01
+Link: https://news.ycombinator.com/item?id=43546264
+Comment:
+Add it to built with django!<p><a href="https://builtwithdjango.com" rel="nofollow">https://builtwithdjango.com</a>
+--------------------
+
+Date: 2025-02-28
+Link: https://news.ycombinator.com/item?id=43205754
+Comment:
+I know it's not really apparent but this tool is fully open source and can be self hosted: <a href="https://github.com/rasulkireev/marketing-agents">https://github.com/rasulkireev/marketing-agents</a>
+--------------------
+
+Date: 2025-02-28
+Link: https://news.ycombinator.com/item?id=43205212
+Comment:
+Markteing AI Agents for founders who suck at Marketing: <a href="https://marketingagents.net/" rel="nofollow">https://marketingagents.net/</a>
+--------------------
+
+Date: 2025-02-14
+Link: https://news.ycombinator.com/item?id=43049154
+Comment:
+This might be one of the weirdest answers, and it is not exactly what you asked for, but Naruto the Anime/Manga had a huuuuuge impact on my personality.<p>Even wrote a post about it: <a href="https://www.rasulkireev.com/naruto-influence" rel="nofollow">https://www.rasulkireev.com/naruto-influence</a>
+--------------------
+
+Date: 2025-02-13
+Link: https://news.ycombinator.com/item?id=43033269
+Comment:
+i stared at this with more intensity and interest than any movie in the recent times
+--------------------
+
+Date: 2025-02-10
+Link: https://news.ycombinator.com/item?id=42999324
+Comment:
+You should add it to Built with Django - <a href="https://builtwithdjango.com/projects/new/" rel="nofollow">https://builtwithdjango.com/projects/new/</a>
+--------------------
+
+Date: 2025-02-10
+Link: https://news.ycombinator.com/item?id=42999316
+Comment:
+You should add it to Built with Django - <a href="https://builtwithdjango.com/projects/new/" rel="nofollow">https://builtwithdjango.com/projects/new/</a>
+--------------------
+
+Date: 2024-12-08
+Link: https://news.ycombinator.com/item?id=42355624
+Comment:
+thank you!
+--------------------
+
+Date: 2024-12-01
+Link: https://news.ycombinator.com/item?id=42287783
+Comment:
+When We Cease to Understand the World by Benjamín Labatut.<p>It is about scientists that are fully consumed by their work, going mad somtimes. Their work is making a world a better place, but at the same time is used to kill lots of people.<p>This is the first book for me that I can say is beautifully written. Even though the subject was heavy at times, I couldn't stop reading it.
+--------------------
+
+Date: 2024-11-01
+Link: https://news.ycombinator.com/item?id=42014911
+Comment:
+I tried doing something like that: <a href="https://gettjalerts.com/" rel="nofollow">https://gettjalerts.com/</a><p>I added semantic search, but I'm workin on adding resume upload/parsing to do automatic matching.
+--------------------
+
+Date: 2024-10-14
+Link: https://news.ycombinator.com/item?id=41835374
+Comment:
+short for open-graph: <a href="https://ogp.me/" rel="nofollow">https://ogp.me/</a>
+--------------------
+
+Date: 2024-10-09
+Link: https://news.ycombinator.com/item?id=41785788
+Comment:
+I was using ogimpact.sh in the past, but they went out of business, so to speak. They do offer self hosting, but I found the guide confusing and decided to build my own.<p>It works pretty well for my needs, but hopefully can be useful to some of you guys!<p>Happy to answer any questions :)
+--------------------
+
+Date: 2024-09-28
+Link: https://news.ycombinator.com/item?id=41677757
+Comment:
+Whatever gets the job done
+--------------------
+
+Date: 2024-09-27
+Link: https://news.ycombinator.com/item?id=41672582
+Comment:
+Great opportunity to get ahead of all the lazy people who use AI for a cover letter. Do a video! Sure, AI will be able to do that soon, but then we (not lazy people, who care) will come up with something even more personal!
+--------------------
+
+Date: 2024-09-19
+Link: https://news.ycombinator.com/item?id=41589845
+Comment:
+I have one suggestion. Find the place where you want to work. Get the email of the hiring person. Record a video introduction and send it along with a description of why you are the best person for the work.<p>This will put you above everyone else! You are almost guaranteed to go through the door and then it is up to you to prove you are awesome, which I have no doubt you are!<p>Self-plug: I built a tool to help you find the perfect job for you (and you can filter on whether the job posting has an email) <a href="https://gettjalerts.com/jobs/" rel="nofollow">https://gettjalerts.com/jobs/</a>
+--------------------
+
+Date: 2024-07-15
+Link: https://news.ycombinator.com/item?id=40966144
+Comment:
+I use Get TJ Alerts's [1] search tool and search for jobs that have my preferred tech stack, have comp info and contact info. Then I send a personal email with a video intro.<p>[1]: <a href="https://gettjalerts.com/" rel="nofollow">https://gettjalerts.com/</a>
+--------------------
+
+Date: 2024-05-08
+Link: https://news.ycombinator.com/item?id=40295122
+Comment:
+- Antifragile<p>- Masters of Doom<p>- Atomic Habits<p>- How to Read a Book<p>- Books by Austin Kleon<p>I'm sure i'll remember more, but these were the ones that popped into my head. I'm trying to switch it up a little and start reading older books and get hooked so that I'm can reread those.
+--------------------
+
+Date: 2024-05-02
+Link: https://news.ycombinator.com/item?id=40237060
+Comment:
+<a href="https://www.screen.studio/" rel="nofollow">https://www.screen.studio/</a>
+--------------------
+
+Date: 2024-04-09
+Link: https://news.ycombinator.com/item?id=39976457
+Comment:
+I've been enjoying Boox Palma. Very nice form factor! And Readwise Reader works great on it.
+--------------------
+
+Date: 2024-03-26
+Link: https://news.ycombinator.com/item?id=39824983
+Comment:
+This is so awesome :heart_eyes:!!
+--------------------
+
+Date: 2024-03-15
+Link: https://news.ycombinator.com/item?id=39712728
+Comment:
+Direct outreach is definitely the way.<p>I built a tool to find a lot of the recent job openings online and put them into a database. You can create an alert to notify yourself of jobs using your tech stack and message directly. It's free, checkout it out: <a href="https://gettjalerts.com/" rel="nofollow">https://gettjalerts.com/</a>
+--------------------
+
+Date: 2024-03-11
+Link: https://news.ycombinator.com/item?id=39665643
+Comment:
+If it is a job you really want, then you need a cover letter a email intro and a video intro of yourself, that will increase your chances 10 fold!
+--------------------
+
+Date: 2024-03-10
+Link: https://news.ycombinator.com/item?id=39657265
+Comment:
+you should submit it to <a href="https://builtwithdjango.com" rel="nofollow">https://builtwithdjango.com</a>!
+--------------------
+
+Date: 2024-03-06
+Link: https://news.ycombinator.com/item?id=39613808
+Comment:
+HN's Who is Hiring is always a great place to look at! I built a small site that gets all the posts from it (as well as some other places) and puts into a searchable db.<p>It's free, you can check out here: <a href="https://gettjalerts.com/" rel="nofollow">https://gettjalerts.com/</a><p>You can even create an email alert to get notified of any new positions that require your skillset.
+--------------------
+
+Date: 2024-03-06
+Link: https://news.ycombinator.com/item?id=39613591
+Comment:
+Love it. Super easy to self host and use. Now I have a personal Google!
+--------------------
+
+Date: 2024-02-29
+Link: https://news.ycombinator.com/item?id=39548040
+Comment:
+Yes, that's the next feature I was going to work on. I have already setup semantic search. I just need to add ability to upload->read->vectorize resume and do a similarity search on those vectors. Shouldn't be too hard.<p>Won't be able to do this in the near future. Quite backed up at work.
+--------------------
+
+Date: 2024-02-28
+Link: https://news.ycombinator.com/item?id=39540697
+Comment:
+i did that as a small side project :) you can check it out here, it's free, would love your thoughts: <a href="https://gettjalerts.com/" rel="nofollow">https://gettjalerts.com/</a>
+--------------------
+
+Date: 2024-02-16
+Link: https://news.ycombinator.com/item?id=39398414
+Comment:
+Related: <a href="https://news.ycombinator.com/item?id=33224240">https://news.ycombinator.com/item?id=33224240</a>
+--------------------
+
+Date: 2024-01-12
+Link: https://news.ycombinator.com/item?id=38967249
+Comment:
+<a href="https://gettjalerts.com" rel="nofollow">https://gettjalerts.com</a><p>Built this to keep track of new jobs using my tech stack. Adding more filter options soon.
+--------------------
+
+Date: 2024-01-02
+Link: https://news.ycombinator.com/item?id=38845490
+Comment:
+Make sure you sign up for alerts on gettjalerts.com! It's free, I made it to get alerts on jobs they use my tech stack.
+--------------------
+
+Date: 2023-12-14
+Link: https://news.ycombinator.com/item?id=38642105
+Comment:
+<a href="https://gettjalerts.com" rel="nofollow noreferrer">https://gettjalerts.com</a> to help me find a job. I found my job, now I hope others can too!
+--------------------
+
+Date: 2023-12-13
+Link: https://news.ycombinator.com/item?id=38629090
+Comment:
+<a href="https://github.com/builtwithdjango/builtwithdjango">https://github.com/builtwithdjango/builtwithdjango</a><p>This is not the best practice codebase as I wrote it when I was learning Django. But is it very applied. Any beginner should be able to understand this.
+--------------------
+
+Date: 2023-12-05
+Link: https://news.ycombinator.com/item?id=38531492
+Comment:
+I agree with another commenter about reaching out to people directly. This is why I built TJ Alerts[0]. You can create an alert for a specific technology and will get notified every time a new job pops up.<p>Better yet, there is a search panel that would allow you to filter out all the jobs that have contact info, so that you can reach out directly.<p>Give it a try, would love to know what you think.<p>[0]: <a href="https://gettjalerts.com/" rel="nofollow noreferrer">https://gettjalerts.com/</a>
+--------------------
+
+Date: 2023-12-04
+Link: https://news.ycombinator.com/item?id=38523374
+Comment:
+1. save in a text file
+2. save all their content to yacy, so i can search later
+--------------------
+
+Date: 2023-11-30
+Link: https://news.ycombinator.com/item?id=38468482
+Comment:
+This has been a problem i saw from the day i deployed the app. This will be a major focus for the next round of fixes! thanks for mentioning this.
+--------------------
+
+Date: 2023-11-29
+Link: https://news.ycombinator.com/item?id=38464739
+Comment:
+ooh, haven't done considered filtering by role. will think about it. for now you can search by tech you know best.<p>have to work on the dead positions, you are totally right.
+--------------------
+
+Date: 2023-11-29
+Link: https://news.ycombinator.com/item?id=38463109
+Comment:
+Try using TJ Alerts[0]. Created it specifically for this use case. It's free. Has a bunch of cool filters and sorts (+ semantic search). Would love to hear your opinion. Will try to make it paid soon.<p>[0]: <a href="https://gettjalerts.com" rel="nofollow noreferrer">https://gettjalerts.com</a>
+--------------------
+
+Date: 2023-11-03
+Link: https://news.ycombinator.com/item?id=38128533
+Comment:
+What you know best!<p>For me it would be:<p>*Django* for backend with the built-in templates. No frontend backend split.<p>TailwindCSS for styling.<p>StimulusJS for sprinkling JS wherever needed, which is not very often.<p>Postgres as my DB (although if I'm not integrating Stripe, SQLite will suffice).<p>Maybe Redis for caching and as a broker for background tasks, if needed.
+--------------------
+
+Date: 2023-09-18
+Link: https://news.ycombinator.com/item?id=37555448
+Comment:
+Pragmatic Thinking and Learning, Thinking Fast & Slow and Predictably Irrational are the first that come to mind for me.
+--------------------
+
+Date: 2023-09-16
+Link: https://news.ycombinator.com/item?id=37534694
+Comment:
+I built a site for that recently. Simple job scraper, and there is a Remote filter. Here is the link to the current search results:<p><a href="https://gettjalerts.com/jobs/?description=&locations=&is_remote=false&compensation_summary__isempty=unknown&is_onsite=unknown" rel="nofollow noreferrer">https://gettjalerts.com/jobs/?description=&locations=&is_rem...</a>
+--------------------
+
+Date: 2023-09-16
+Link: https://news.ycombinator.com/item?id=37534661
+Comment:
+For me side projects are fun and so I often think about them and when I get the chance I just remember that really want to work on it.<p>Leetcode I don't like. I know I should do it, but it's not fun and it is never in my head, so I just don't ever find the time for that.<p>The lesson here is if you want to do something you will find the time. So phrase it or make it such that either of these to are fun for you to do.
+--------------------
+
+Date: 2023-08-29
+Link: https://news.ycombinator.com/item?id=37306700
+Comment:
+Running into a similar situation, would love to hear people's thoughts.
+--------------------
+
+Date: 2023-08-04
+Link: https://news.ycombinator.com/item?id=37001247
+Comment:
+Already working on that.
+--------------------
+
+Date: 2023-07-04
+Link: https://news.ycombinator.com/item?id=36593971
+Comment:
+<a href="https://rasulkireev.com" rel="nofollow noreferrer">https://rasulkireev.com</a>
+--------------------
+
+Date: 2023-06-08
+Link: https://news.ycombinator.com/item?id=36241068
+Comment:
+It is a temp name. It will become Monica ones ready for prod.
+--------------------
+
+Date: 2023-06-03
+Link: https://news.ycombinator.com/item?id=36179770
+Comment:
+Yeah, HN is awesome!
+--------------------
+
+Date: 2023-06-03
+Link: https://news.ycombinator.com/item?id=36176240
+Comment:
+Unfortunately I don't since I got heavily downvoted for posting a Crypto Tutorial I made. It wasn't scam or anything, just a func little tutorial on how to create your own crypto coin.
+--------------------
+
+Date: 2023-06-03
+Link: https://news.ycombinator.com/item?id=36175598
+Comment:
+Lobste.rs is HN but for tech only.<p><a href="https://lobste.rs" rel="nofollow">https://lobste.rs</a>
+--------------------
+
+Date: 2023-05-23
+Link: https://news.ycombinator.com/item?id=36040115
+Comment:
+Damn, it's like Joel is talking to me. Thanks for sharing this.
+--------------------
+
+Date: 2023-05-23
+Link: https://news.ycombinator.com/item?id=36039348
+Comment:
+Love this!
+--------------------
+
+Date: 2023-05-23
+Link: https://news.ycombinator.com/item?id=36039337
+Comment:
+> Escape the trap of binary thinking and accept that code serves a purpose and if that purpose is being met, it's fine.<p>Love this line! Thanks a ton for you thought, they are great and to the point.
+--------------------
+
+Date: 2023-05-23
+Link: https://news.ycombinator.com/item?id=36038621
+Comment:
+Just to be clear, I was not implying that I want to give up and not do it. (I love writing and fixing code). I was more alluding to the fact that every time I fix a bug, I just want to fix the whole thing.<p>Thanks a ton for your advice and thanks for the recommendation!
+--------------------
+
+Date: 2023-03-18
+Link: https://news.ycombinator.com/item?id=35209548
+Comment:
+The target audience are businesses, hence why I thought to charge more. For now I'm testing if the product works and there is a need. Will adjust pricing and other components once I see some results.
+--------------------
+
+Date: 2023-03-17
+Link: https://news.ycombinator.com/item?id=35199379
+Comment:
+Yes. I'm charging for the work I did parsing and categorizing all the open information, making it easy for businesses to filter and find perfect candidates.
+--------------------
+
+Date: 2023-03-15
+Link: https://news.ycombinator.com/item?id=35168661
+Comment:
+I gave it some thought and made it free.
+--------------------
+
+Date: 2023-03-14
+Link: https://news.ycombinator.com/item?id=35145491
+Comment:
+Thank you, fixed.
+--------------------
+
+Date: 2023-03-13
+Link: https://news.ycombinator.com/item?id=35143606
+Comment:
+Wasn't aware of this, thanks for sharing!
+--------------------
+
+Date: 2023-03-13
+Link: https://news.ycombinator.com/item?id=35143594
+Comment:
+<3 Made my day!!
+--------------------
+
+Date: 2023-03-13
+Link: https://news.ycombinator.com/item?id=35143587
+Comment:
+I just published this today, so 0 right now...
+--------------------
+
+Date: 2023-03-13
+Link: https://news.ycombinator.com/item?id=35143131
+Comment:
+I don't know of anything like that. Good project idea.<p>The idea of staying close to a niche is that there are enough of site where companies can look for candidates, so I don't want to compete with those.
+--------------------
+
+Date: 2023-03-13
+Link: https://news.ycombinator.com/item?id=35141813
+Comment:
+Allowing only paying businesses to contact you, I ensure that you will be contacted by a high quality firm and neither your or their time is wasted.<p>You are free to post your profiles on others sites for free too, I'm not stopping you.
+--------------------
+
+Date: 2023-01-26
+Link: https://news.ycombinator.com/item?id=34537871
+Comment:
+Django, SQLite, StimulusJS, TailwindCSS, DigitalOcean Droplet, MailGun
+--------------------
+
+Date: 2023-01-25
+Link: https://news.ycombinator.com/item?id=34520418
+Comment:
+Not an exact answer to your question, but there are many projects and companies that use django. One site that highlights it is "Built with Django" [1].<p>[1]: <a href="https://builtwithdjango.com" rel="nofollow">https://builtwithdjango.com</a>
+--------------------
+
+Date: 2022-10-19
+Link: https://news.ycombinator.com/item?id=33261398
+Comment:
+Reading other comments now and have to agree with them that first you should take some time to stabilize you life, emotionally. Having kids will be a great undertaking (both before they are born and after).<p>So, talk to your wife, talk to your therapist, and anyone else you trust. Make sure you will be happy with your life, whether you have kids or don't and only then try having them.<p>Don't forget, that after your kids have grown up, they will go on to live their own lives and it will be just you and your spouse left. So make sure you have a good relationship with her.
+--------------------
+
+Date: 2022-10-19
+Link: https://news.ycombinator.com/item?id=33261346
+Comment:
+If your spouse of the same opinion, that she wants kids than there are many options. If she doesn't want kids than this is a tougher problem to solve and I won't be able to advise on it. But let's assume she does.<p>1. Talk to a doctor and see if your wife would be able to bear a child. If doctor approves and your wife is ok with it, give it a shot. If you wife is not ok with having to go through a pregnancy in that age (which is totally understandable), then try #2.<p>2. If you are stuck on an idea of biological children you could try finding a surrogate mother who will bear your child for you. As far as I understand it is your sperm and your spouse's eggs are used, so the child will have your genes. This might be expensive, but is a good solution. Again, talk to a doctor about this possibility. Perhaps during the same visit as #1.<p>3. If for whatever reason, #2 is not an option, there is another option, which I honestly think should go as #2. Adoption. There are a lot of kids that have been abandoned by there parents. It is always heartbreaking to think about their lives. There are of course a lot of things to consider, but in the end I think it will be a win-win situation for all parties involved.<p>I'm sure there are more options that I didn't think about, so don't think that life is over. Kids or no kids, you will find a way to add meaning to your life. There is no need to leave your wife or get bad diseases, regardless of the outcome.<p>Just remember that everything will be fine.
+--------------------
+
+Date: 2022-10-18
+Link: https://news.ycombinator.com/item?id=33245992
+Comment:
+Besides the official Rust Lang Book I would also recommend checking out the awesome-rust repo:<p><a href="https://github.com/rust-unofficial/awesome-rust" rel="nofollow">https://github.com/rust-unofficial/awesome-rust</a>
+--------------------
+
+Date: 2022-10-17
+Link: https://news.ycombinator.com/item?id=33233475
+Comment:
+The thing is that I don't like "sales people" for the most part, I don't want to listen to their advice.<p>I'm interested from hearing thought of other programmers / developers that created something small and were able to "sell" it. I think this advice will be much more applicable than from a "sales person".<p>I might be wrong, but I feel like sales people learn the wrong thing on the job. If you read other comments it seems that small businesses are getting swarmed by soul-less calls from these people that will lead nowhere. That is the exact thing I want to avoid.
+--------------------
+
+Date: 2022-10-17
+Link: https://news.ycombinator.com/item?id=33233408
+Comment:
+Yeah, that's the plan. Figure some things out for myself and then learn on the "Best Practices" to improve.
+--------------------
+
+Date: 2022-10-17
+Link: https://news.ycombinator.com/item?id=33233395
+Comment:
+My first narrowing down is the locality. I will start off with businesses in m area. Second narrowing is the Google Ratings. I will target location that have ~4 stars to help them improve that. Then I will start narrowing down on business type.
+--------------------
+
+Date: 2022-10-17
+Link: https://news.ycombinator.com/item?id=33233342
+Comment:
+haha, not going to focus on features, I promise :D
+--------------------
+
+Date: 2022-10-17
+Link: https://news.ycombinator.com/item?id=33233303
+Comment:
+Yep, exactly my thoughts!
+--------------------
+
+Date: 2022-10-17
+Link: https://news.ycombinator.com/item?id=33233296
+Comment:
+1. It could be a huge mistake I built a whole startup around my business idea. The reality is that the code was simple, it took me ~2 week of not too involved coding. So, if it doesn't pan out, it's not like I wasted a ton of time or money.<p>2. It could very well be the case that no one needs my solution to a problem that I have (perhaps) imagined. However, if the problem does exist, I thought it would be better to be able to show the prototype as to how it would solve their problem.
+--------------------
+
+Date: 2022-09-16
+Link: https://news.ycombinator.com/item?id=32868364
+Comment:
+Thanks for making this, it's awesome!
+--------------------
+
+Date: 2022-09-11
+Link: https://news.ycombinator.com/item?id=32800282
+Comment:
+I'm so intrigued about Icarus. Interesting why people recommend to watch without reading, but I'll do exactly that. Thanks
+--------------------
+
+Date: 2022-09-11
+Link: https://news.ycombinator.com/item?id=32800258
+Comment:
+That is so fascinating. I almost never see the Tyson Cosmos recommended. But see Sagan's everywhere. And somehow still didn't watch it.
+--------------------
+
+Date: 2022-09-11
+Link: https://news.ycombinator.com/item?id=32799800
+Comment:
+I'll start. My favorite is Cosmos, starring Neil deGrasse Tyson. Another favorite of mine is the BBC's Planet Earth series.
+--------------------
+
+Date: 2022-09-02
+Link: https://news.ycombinator.com/item?id=32691894
+Comment:
+As far as I understand, you can, as long as your business is viable. Has revenue, employees, business plan, etc.
+--------------------
+
+Date: 2022-09-02
+Link: https://news.ycombinator.com/item?id=32691886
+Comment:
+That's what I settled on myself. I decided to focus on doin the prep work, while I can. Publish free content, gain audience, etc. And once I'm allowed to charge, start doing that.<p>Recently I found out I'm going to be a father, so I wanted to speed that process up. Thanks for sharing your experience.
+--------------------
+
+Date: 2022-08-26
+Link: https://news.ycombinator.com/item?id=32602754
+Comment:
+What did you want to use it for, if you don't mind me asking?
+--------------------
+
+Date: 2022-08-25
+Link: https://news.ycombinator.com/item?id=32599099
+Comment:
+Love it, have 0 complaints! I got DS220+
+--------------------
+
+Date: 2022-08-25
+Link: https://news.ycombinator.com/item?id=32598676
+Comment:
+Yeah, if it is just one articles or a blog post I crawl at depth 0, and if it is someone's personal website who I enjoy reading always, no matter what they write, I do an infinite crawl on that specific domain.
+--------------------
+
+Date: 2022-08-25
+Link: https://news.ycombinator.com/item?id=32598658
+Comment:
+I did that a couple of months ago. Was planning to write something up in the next month or so.
+--------------------
+
+Date: 2022-08-25
+Link: https://news.ycombinator.com/item?id=32597843
+Comment:
+Recently installed YaCy on my Synology via docker image the provide. Already saved about 10Gb of content interesting to me. Now, I have a personal Search Engine. Awesome.
+--------------------
+
+Date: 2022-08-15
+Link: https://news.ycombinator.com/item?id=32470426
+Comment:
+Gwern Branwen - <a href="https://www.gwern.net/index" rel="nofollow">https://www.gwern.net/index</a><p>Shan Carter - <a href="http://shancarter.com" rel="nofollow">http://shancarter.com</a><p>Nikita Voloboev - <a href="https://wiki.nikiv.dev" rel="nofollow">https://wiki.nikiv.dev</a><p>Alexey Guzey - <a href="https://guzey.com" rel="nofollow">https://guzey.com</a><p>Ryan Kulp - <a href="https://www.ryanckulp.com" rel="nofollow">https://www.ryanckulp.com</a><p>Tania Rascia - <a href="https://www.taniarascia.com" rel="nofollow">https://www.taniarascia.com</a>
+--------------------
+
+Date: 2022-07-19
+Link: https://news.ycombinator.com/item?id=32152464
+Comment:
+For me, it was a little surprising that there was no effect at all. For whatever reason it felt like it ought to have an impact.<p>However, if I think about it, reading has been done for thousands of years and by now something like that would have prevailed if it was effective.<p>Anyway, we need more experiments like this. I bet there are a ton of things out there that we think make out lives better, but in reality don't do a thing.
+--------------------
+
+Date: 2022-07-19
+Link: https://news.ycombinator.com/item?id=32152434
+Comment:
+should have continued reading. they follow with "not so surprising".
+--------------------
+
+Date: 2022-07-10
+Link: https://news.ycombinator.com/item?id=32044479
+Comment:
+Valid point. I'm sure there are people who would approach this that way. At the same time, I feel if you are interested enough to go through the whole thing and still brag about it that way, than you read them wrong :)<p>At the point I am at life I don't yet know what I'm deeply interested in, so this is a way for me to get general education, get some exposure to variety of texts that have been written across time and see if anything spark joy. I'm not planning to pain through the books. If I'm not enjoying something I can freely skip. If something sparked interest, I'll be sure to reevaluate the list.<p>Thanks for the typo note, fixed it.
+--------------------
+
+Date: 2022-07-10
+Link: https://news.ycombinator.com/item?id=32044433
+Comment:
+Yes, there are a couple of such lists. I can only recall the one from St. John's College [1].<p>[1] - <a href="https://www.sjc.edu/application/files/7216/3596/8743/Santa_Fe_Eastern_Classics_Reading_List.pdf" rel="nofollow">https://www.sjc.edu/application/files/7216/3596/8743/Santa_F...</a>
+--------------------
+
+Date: 2022-06-25
+Link: https://news.ycombinator.com/item?id=31872151
+Comment:
+This is insane! Thanks for recommendation! Was able to set it up relatively quickly and now have a personal search of all the things that I find interesting, this is insane!
+--------------------
+
+Date: 2022-06-22
+Link: https://news.ycombinator.com/item?id=31836077
+Comment:
+> Customers don't even want to download more apps, let alone pay money for them.<p>Interestingly, I found myself thinking about this and thought about it a little different. I indeed want to have as little apps on my phone as possible, but that made me want to increase the quality of those apps. And thus I wasn't against paying for those if they are indeed better quality.<p>It's like with cooking. If your dish uses less ingredients, you can focus on better quality ingredients then.
+--------------------
+
+Date: 2022-06-22
+Link: https://news.ycombinator.com/item?id=31836047
+Comment:
+TL;DR - I'd say try learning and building with both and see which one makes more sense. You don't even have to think which is better for your career, as frontend, backend, fullstack can all find good paying jobs. What matter is you enjoying your work.<p>I'm a self taught software engineer, and have about the same experience as you.<p>I knew a little bit of python when I started learning and thus decided to learn Django (backend), really liked it (even then CSS was giving me the most trouble).<p>Then decided to learn JS to get a more well-rounded education, but hated it. Now I use Hotwired techniques for my web apps, to the least amount of Javascript possible.
+--------------------
+
+Date: 2022-06-02
+Link: https://news.ycombinator.com/item?id=31595476
+Comment:
+Widelands is a free, open source real-time strategy game with singleplayer campaigns and a multiplayer mode. The game was inspired by Settlers II™<p>[1]: <a href="https://builtwithdjango.com/projects/widelands" rel="nofollow">https://builtwithdjango.com/projects/widelands</a>
+--------------------
+
+Date: 2022-04-27
+Link: https://news.ycombinator.com/item?id=31186013
+Comment:
+Well, making it open source is not the same as making regular citizens/programmers to work on it.<p>You still pay the company to develop and maintain the software. Same way as open source developers get "sponsored". The reason is that anyone who wants to see the code and suggest on how to make it better, or to report a bug, then that would be possible. Furthermore, that work can be reused by other parts of the government.<p>That last point is why some companies wouldn't want to do it, or would charge more. However, to your point, I think the increased cost is worth it in this case.<p>Sure, there are going to be less better roads/schools by 500k, but the problem with that money is that there are rarely big projects for that amount, so it's not like they would be put to best use without being "lost" in the process of relocation.
+--------------------
+
+Date: 2022-04-25
+Link: https://news.ycombinator.com/item?id=31155653
+Comment:
+Yes, I use it for builtwithdjango.com . I have not a single bad thing to say about it, not one!<p>It is so convenient to have it as a file, especially when you are just learning to do software development.<p>And the performance has not been an issue once.<p>One thing to note is that my site is not Facebook size. It only gets ~40 page views a day. And most of them are just for viewing, so no database opertaions.<p>So, I'm not going to be the most credible voice here. FWIW, I know that Pieter Levels, who runs multiple projects like nomadlist, remoteok, rebase, uses both SQLite and plain JSON files for storage.
+--------------------
+
+Date: 2022-04-15
+Link: https://news.ycombinator.com/item?id=31043848
+Comment:
+I'm going through two Python books right now, both of which I'm enjoying:<p>- Python Workout: 50 ten-minute exercises.
+- Classic Computer Science Problems in Python.<p>Would strongly recommend if you are looking to up your skills in Python
+--------------------
+
+Date: 2022-04-07
+Link: https://news.ycombinator.com/item?id=30940407
+Comment:
+<a href="https://rasulkireev.com" rel="nofollow">https://rasulkireev.com</a><p>Built with Gridsome and hosted on Netlify.
+--------------------
+
+Date: 2022-04-07
+Link: https://news.ycombinator.com/item?id=30940402
+Comment:
+Nice, you should submit your site for the Built with Django directory - <a href="https://builtwithdjango.com" rel="nofollow">https://builtwithdjango.com</a>
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30250118
+Comment:
+Great and totally correct assumption.<p>Love those suggestions! I got MX Master and a Keychron keyboard expensed at work last year. Great improvement to my workflow.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30250093
+Comment:
+Nice, thankfully my spouse likes to prep pineapples and does it in like 2-3 min.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30250075
+Comment:
+Thanks for this, great suggestions!<p>- I recently got an AeroPress, love it!<p>- Electric Kettle is basically the first thing we bought when we moved in, so useful!<p>- How are instacrates useful to you? Just general purpose storage?<p>- Crokinole, very intersting, looking into this.<p>- Agreed, power tools are a must!<p>- I actually got a Butcherbox subcription, and am so happy about it. Good thing I like to cook.<p>- A good laptop is a must also.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30250014
+Comment:
+1. Air filter totally agree!<p>2. Dehumidifier strongly depends on where you live, cause, in my apartment we can't live without a Humidifier, for some reason it always get so dry!
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249975
+Comment:
+Haha, nice, mine came with the apartment. It's funny how quickly we take things for granted. It does indeed save a lot of time.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249871
+Comment:
+The 3d printer you mentioned is on sale right now, for $189!
+<a href="https://www.creality3dofficial.com/products/official-creality-ender-3-3d-printer" rel="nofollow">https://www.creality3dofficial.com/products/official-crealit...</a>
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249850
+Comment:
+1. Nice.<p>2. First time I'm hearing about something called butt kicker. Looks interesting.<p>3. This is awesome! I was thinking of getting a 3d printer for a while now, I thought that they were much more expensive.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249823
+Comment:
+Very interesting, was looking into Nintendo Switch lately, I just don't do gaming all that often.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249809
+Comment:
+Completely agree, noise cancelling headphones can be a great improvement to ones life. I got a pair last year and strongly recommend to people who don't have one.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249750
+Comment:
+Good one. I have 3 jackets, but wear only one of them all the time. Even if it inconvenient for the weather.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249682
+Comment:
+I was actually thinking of doing some Brazilian Jiu Jutsu. Good idea.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249673
+Comment:
+I already have one, and addition of $300 is not going to change it much. Plus, this gift was given with direct orders to spend it on something nice. That said, I totally agree with you, contributing to a rainy day fund can totally improve one's life.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249398
+Comment:
+I love that books is the most popular answer, so far, and will probably stay that way.
+--------------------
+
+Date: 2022-02-07
+Link: https://news.ycombinator.com/item?id=30249339
+Comment:
+100% agreed. A few years back, a friend broke my macbook and gave me his surface to use for a few weeks. The hardware is great!
+--------------------
+
+Date: 2022-02-05
+Link: https://news.ycombinator.com/item?id=30226018
+Comment:
+It does look date, but damn, it is so functional. It just does what it needs to, which is beautiful.<p>Just like Calibre for book management. Looks super old, but does everything so well.<p>I would take functional over pretty any time of the day.<p>That said, great work by OP.
+--------------------
+
+Date: 2022-02-05
+Link: https://news.ycombinator.com/item?id=30225969
+Comment:
+I love Zoho for what they offer for $12/year. I agree that UI is better on Gmail, which is why I redirect all email to my GMail Dashboard.
+--------------------
+
+Date: 2022-02-05
+Link: https://news.ycombinator.com/item?id=30225962
+Comment:
+I love Zoho for what they offer for $12/year. I agree that UI is better on Gmail, which is why I redirect all email to my GMail Dashboard.
+--------------------
+
+Date: 2022-02-05
+Link: https://news.ycombinator.com/item?id=30225944
+Comment:
+I love Zoho Mail.<p>I pay $12/year and can have as many emails as I want. For example, I have set up an email for my personal domain, and 3 of my projects. It is very easy to do with their docs.<p>You could stop there, but I redirect all those email to my GMail address (I just prefer Gmail UI). Then I set up labels for each email and now I have 5 different email in my GMail Account.
+--------------------
+
+Date: 2022-01-27
+Link: https://news.ycombinator.com/item?id=30100911
+Comment:
+I think this plays to two human traits. One is the need to remember and thus right something down. Humans have been doing this for years. Second is trying something new.<p>And you are right, trying something new is exciting. I remember when I first discovered Evernote, I thought it was super cool, then Roam, then Obsidian.<p>But I think the following will happen at some point in your journey (at least it happened to me). You will find a system/approach that works for you and you will not want to try other things. The workflow that I have configure for myself with the use of Obsidian, Readwise, and a couple of other tools, that the hustle of moving it to some other stack is just too big. It is so big in fact, that it trumps the novelty card completely.
+--------------------
+
+Date: 2022-01-01
+Link: https://news.ycombinator.com/item?id=29764062
+Comment:
+This is awesome!
+--------------------
+
+Date: 2022-01-01
+Link: https://news.ycombinator.com/item?id=29763968
+Comment:
+For me it was "How to Take Smart Notes" by Sönke Ahrens. This may be a little cliche answer, but to me it was very surprising to discover a person who reached such high productivity in Academic Publishing with the help of a smart system.<p>I have started to implement the Zettelkasten system in my own life. Hope that will use that system to publish more work on my website.<p>I published my thoughts, learning and notes on this book -> <a href="https://rasulkireev.com/how-to-take-smart-notes/" rel="nofollow">https://rasulkireev.com/how-to-take-smart-notes/</a>
+--------------------
+
+Date: 2021-12-23
+Link: https://news.ycombinator.com/item?id=29665481
+Comment:
+I second Plausible. Have been using it close to a year now. Very happy about it. It is probably not as feature rich as GA, but who needs those features, right. On the other hand they are adding new things everyday, but they focus on what users want.
+--------------------
+
+Date: 2021-12-17
+Link: https://news.ycombinator.com/item?id=29593530
+Comment:
+I can't talk from experience, but whenever I think about the best books to read, Mortimer Adler's list of books always comes to my head.<p>Mortimer Adler is the author of "How to Read a Book", conincedentally, also a good book, he did a lot to promote quality reading in his age.<p>At the end of the book, he lists greatest books ever written, in his opinion. This list is called "Greatest Books of the Western World". It was even published as a series once. I'm still hunting for this set.<p>Here is the link to the list -> <a href="https://www.goodreads.com/list/show/120742.Mortimer_J_Adler_s_reading_list" rel="nofollow">https://www.goodreads.com/list/show/120742.Mortimer_J_Adler_...</a>
+--------------------
+
+Date: 2021-12-09
+Link: https://news.ycombinator.com/item?id=29504249
+Comment:
+Obviously this is not a solution for everyone, but tailwindui solves all my problems. From that point all the updates are suuuuper quick to make.
+--------------------
+
+Date: 2021-12-04
+Link: https://news.ycombinator.com/item?id=29439026
+Comment:
+1. Didn't realize chess content was popular on HN.
+2. Don't understand why people upvote a spoiler.
+3. Was watching the stream, and couldn't stop watching, was too nervous for Ian.
+--------------------
+
+Date: 2021-11-22
+Link: https://news.ycombinator.com/item?id=29310412
+Comment:
+Good books. Surprised to see some fiction, didn't know Bill reads that :)
+--------------------
+
+Date: 2021-11-22
+Link: https://news.ycombinator.com/item?id=29307293
+Comment:
+This is awesome! 100% I will do a similar project in the future, so saved this article for reference. Well written.<p>Quick question, if for example you decided to another RPi to the cluster, how easy do you think it would be? Just attach it and connect to the network?
+--------------------
+
+Date: 2021-11-22
+Link: https://news.ycombinator.com/item?id=29307243
+Comment:
+I really wanted one ever since they announced the first model, but something has been stopping me. Now that I'm a little older and mature I realize that my instincts not to buy this thing were completely right.<p>How can a device like this not have an ability to make annotations?... What's worse, the highlights you make on the book are not indexed. To me, it's insane.<p>I think one can hack this together with Kobo, I believe. But should you really buy a device for $500+ to hack it together?<p>Once this device supports proper E-Reader features, it will be a great iPad alternative, IMHO. And I'll be a big purchase candidate.
+--------------------
+
+Date: 2021-09-14
+Link: https://news.ycombinator.com/item?id=28526738
+Comment:
+Looks very good, excited to dig in
+--------------------
+
+Date: 2021-07-16
+Link: https://news.ycombinator.com/item?id=27859358
+Comment:
+I have to say it is a pretty neat idea.
+--------------------
+
+Date: 2021-07-16
+Link: https://news.ycombinator.com/item?id=27858091
+Comment:
+A lot of awesome points! Thank retzkek.<p>1. If Chess.com or LiChess were to do something like that I would immediately stop this project, as the main idea here is quantity and those guys can't be beat when it comes to that.
+  - The problem is that it might be technically complicated for them to do any time soon, at least in a format that you have mentioned. Additionally, they'll have to worry about the legality and the security of users.<p>2. The idea is that a person from London, for example, says that he can be at some location at some time and if someone with similar rating replies then they can meet. Additionally I ask people to recommend general chess gathering locations in relevant chanels. I will keep adding them to the main message in the topic, so that if someone is uncomfortable they can just visit that location and with great likelihood find a partner.
+--------------------
+
+Date: 2021-07-02
+Link: https://news.ycombinator.com/item?id=27712481
+Comment:
+Also, I'm trying to keep an up-to-date Obisidian based Zettelkasten. Whenever, I feel it has some value I will publish it with their addon.
+--------------------
+
+Date: 2021-07-02
+Link: https://news.ycombinator.com/item?id=27712475
+Comment:
+Yes, I keep it here <a href="https://rasulkireev.com/brain/" rel="nofollow">https://rasulkireev.com/brain/</a> .<p>It is an interesting merge between manual an automatic process. I keep a Joplin database, with a PARA structure. Then I wrote a script that export all the notes from the Resource section. I then take that folder and put it into my static site builder. Et voila!
+--------------------
+
+Date: 2021-05-22
+Link: https://news.ycombinator.com/item?id=27247417
+Comment:
+Thanks, interesting suggestion :) I'll think of a best way to add such information. I'll probably have a page with all useful chess resources I know.
+--------------------
+
+Date: 2021-05-22
+Link: https://news.ycombinator.com/item?id=27246162
+Comment:
+Hey all,<p>I have recently been trying to find more real life games, but most clubs are closed, and the amount of players in the public parks is sporadic.<p>I know some people are also looking to play chess over the board. For this reason I have created a community where you can find someone to play with in your area, easily. Each topic is a city in our big world.<p>If you are interested head over and register, would love to meet some new people.<p>If we gain a critical mass, there is as strong chance we can become a one stop shop for over the board chess, once the pandemic ends.<p>Thanks for your time, hope you have a wonderful day.
+--------------------
+
+Date: 2021-04-27
+Link: https://news.ycombinator.com/item?id=26956121
+Comment:
+I have mixed feelings.<p>I have been keeping and growing my Zettelkasten with Obsidian for about a year now. I can't say that it have been extremely useful, in terms of the work I produce, but that is clearly my own fault. I do expect that at some point I will start producing more writings from my Zettelkasten.<p>Meanwhile, I suggest you don't get discouraged. Start simple. Download Obsidian (obsidian.md) and start making notes. I like to keep the following format:<p>"""
+[[Source of Idea / Book / Article / Tweet]]<p>> quote that sparked my though<p>my actual thought.<p>Tags: [[Thinking]], [[Thoughts]]
+"""<p>And continue connecting. Don't be too harsh on yourself, keep  growing it slowly and you will reach a point where your graph is very superconnected.
+--------------------
+
+Date: 2021-04-25
+Link: https://news.ycombinator.com/item?id=26937410
+Comment:
+The is the Obsidian Publish service exactly for that usecase. (<a href="https://obsidian.md/publish" rel="nofollow">https://obsidian.md/publish</a>), although it is paid. I'm sure there will be soon, if not already, an open source extension that allows you to do that.
+--------------------
+
+Date: 2021-03-22
+Link: https://news.ycombinator.com/item?id=26543983
+Comment:
+I am leaning toward the Philosophical Logic to start with.
+--------------------
+
+Date: 2021-03-22
+Link: https://news.ycombinator.com/item?id=26543973
+Comment:
+Yeah, I love wikipedia, this is probably a good start :)
+--------------------
+
+Date: 2021-03-22
+Link: https://news.ycombinator.com/item?id=26543967
+Comment:
+Nice one, thanks.
+--------------------
+
+Date: 2021-03-22
+Link: https://news.ycombinator.com/item?id=26543959
+Comment:
+Your site looks awesome, will be sure to add it to builtwithdjango.com.<p>Regarding your issue, you could try adding a for to an existing "View" via get_context_data. Then in the HTML add action tag to your form that with the actial Form View endpoint. This should allow you to have more that one form on a page. I agree that was a little annoying for me at first too. Maybe I'll write a post on how to do this.<p>Otherwise splitting the frontend from the backend can be a solution too. This will probably take a little more time.
+--------------------
+
+Date: 2021-03-19
+Link: https://news.ycombinator.com/item?id=26515016
+Comment:
+- How did build the graph view, looks very good?
+- Did you use Python to build the Chrome addon, too? If so, do you mind sharing a resource where I can see how to do that, cause when I was looking, did not find anything.<p>Thanks a ton in advance.
+--------------------
+
+Date: 2021-03-19
+Link: https://news.ycombinator.com/item?id=26514990
+Comment:
+Thanks.<p>Found a small bug. I've added a few bookmarks and when I press the Random Bookmark link I get an Internal Server Error at this url (<a href="https://lxi.ai/bookmarks/achieve" rel="nofollow">https://lxi.ai/bookmarks/achieve</a>):<p>```
+The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+```
+--------------------
+
+Date: 2021-03-19
+Link: https://news.ycombinator.com/item?id=26514254
+Comment:
+Looks very good, will certainly give it a try.<p>I am assuming you built this with Python, right? Any chance you can share the approach? Would love to try building something for the web with the use of Tensorflow.
+--------------------
+
+Date: 2021-03-13
+Link: https://news.ycombinator.com/item?id=26443407
+Comment:
+I've been using Webmention.io on my own site (<a href="https://rasulkireev.com" rel="nofollow">https://rasulkireev.com</a>) and it works beautifully.<p>A lot of frameworks and static site builders have a plugin to integrate webmentions on one site.<p>I believe this came from the Indieweb movement, which I am a huge fun of.
+--------------------
+
+Date: 2021-02-12
+Link: https://news.ycombinator.com/item?id=26114373
+Comment:
+I'd say depends on the program language you are most familiar with. For example, if you know Python the best, you should definitely Django. If you are a Javascript person, go for Node.js, if Ruby then Ruby on Rails. You get the point :) Use your current experience to your advantage.<p>If you don't know programming, I'd recommend learning Python and then Django.
+--------------------
+
+Date: 2021-01-01
+Link: https://news.ycombinator.com/item?id=25608600
+Comment:
+How do you access/edit it on the phone?
+--------------------
+
+Date: 2021-01-01
+Link: https://news.ycombinator.com/item?id=25608594
+Comment:
+Depends on what you actually want. I use a mix of Obsidian and Joplin.<p>Joplin is very similar to Evernote, but much more pleasant. It is open source and is actively developed. You own you data and you can us ethe ap on any device. I wrote a small intro about Joplin -> <a href="https://rasulkireev.com/joplin/" rel="nofollow">https://rasulkireev.com/joplin/</a> .<p>I use Joplin as a storage for some of my thoughts on different topics. I organized my library with the PARA method. It works like a charm.<p>I use Obsidian as my Zettelkasten. I don't try to use it as my productivity driver. As a simple storage and connector for my thoughts it is perfect.
+--------------------
+
+Date: 2020-12-04
+Link: https://news.ycombinator.com/item?id=25302586
+Comment:
+Agreed. In Joplin internal linking is a pain and that makes it a bad Zettelkasten. However, Joplin is not meant to be that, Joplin is more of an Evernote alternative, which is made for collecting information rather then connecting it. For that Joplin is awesome.<p>For my Zettelkasten and writing I use Obsidian. They are fantastic in tandem.
+--------------------
+
+Date: 2020-12-03
+Link: https://news.ycombinator.com/item?id=25288012
+Comment:
+Nice post! Thanks
+--------------------
+
+Date: 2020-11-05
+Link: https://news.ycombinator.com/item?id=24997788
+Comment:
+Stop telling me to exercise
+--------------------
+
+Date: 2020-11-03
+Link: https://news.ycombinator.com/item?id=24978930
+Comment:
+IMO, the advantage of apps like Obsidian is that you don't have to organize everything meticulously.<p>1. You just create a new note,
+2. give it some tags in square brackets "[[Tag]]"
+3. and if it direcrly related to a note you recall making, make that connection<p>That's it. With time the amounf notes grows, and the amount of interesting connections grows too.<p>It is also important to note, that the process should note be automated. If you want to learn something, you need to make the time to write the note yourself, as opposed to simply copy/pasting.
+--------------------
+
+Date: 2020-09-29
+Link: https://news.ycombinator.com/item?id=24629285
+Comment:
+Thank you!
+--------------------
+
+Date: 2020-09-27
+Link: https://news.ycombinator.com/item?id=24607242
+Comment:
+Amen!<p>If your app is monolith, can I ask you to share the link? I'd love to see your turbolonk implementation. Can't wrap my head around it.
+--------------------
+
+Date: 2020-09-25
+Link: https://news.ycombinator.com/item?id=24589563
+Comment:
+I agree about the spamming. Which is why I am asking this question here. I'm trying to put some content out there without it being spam and getting honest feedback in return. Sometimes, it's obvious to myself what I need to improve, but there are multitide more things that other people can direct my attention to.<p>The goal of making such tutorials is not always making money. I can't speak for everyone, but in my case I have two goals in mind:<p>1. Improve my speaking/presentation skills.
+Consequentially, improve my writing skills after writing a prep and a follow-up post.<p>2. Put myself out there.
+If the content is bad, I'll get a ton of negative feedback and will have no other option but to improve. If I'm good I'll get a chance of gaining a following, getting better job opportunities/higher salaries, etc.<p>There are many more good reasons why a person might want to share his content with the world, even if it is in broken English.<p>Finally, you as a consumer of such content always have an option to walk away, which is very powerful. If I put up shitty content, people don't have to consume it. However, some people might push through an give me some feedback. With each article, I'll get better and therefore attract more reader and feedback, creating this loop of learning.<p>So, advice to not post something, just because it is not good, is a bad advice. I would recommend people share their work, even if it is far from perfect.<p>Big caveat. I am talking about honest people with the best intentions in mind.
+--------------------
+
+Date: 2020-09-17
+Link: https://news.ycombinator.com/item?id=24504634
+Comment:
+I totally agree. It's an overkill for most projects to fully separate the backend form the frontend. Django gives you everything you might need to build a fully capable app.<p>Maybe makes sense for Google, but not for most people working on side projects.
+--------------------
+
+Date: 2020-09-03
+Link: https://news.ycombinator.com/item?id=24366667
+Comment:
+How do you know about Zapier? Was not aware of that one.
+--------------------
+
+Date: 2020-09-03
+Link: https://news.ycombinator.com/item?id=24364871
+Comment:
+If you are looking to ship, then do not separate the backend and frontend too much. I'd pick Django for the backend and "sprinkle" some javascript (vanilla or stimulusjs or alpinejs) on top of the html.<p>The trouble of of separating frontend from backend fully is just not worth it, in my opinion.
+--------------------
+
+Date: 2020-09-02
+Link: https://news.ycombinator.com/item?id=24357285
+Comment:
+Thanks, that's a good source.
+--------------------
+
+Date: 2020-09-01
+Link: https://news.ycombinator.com/item?id=24347416
+Comment:
+Thanks PyDanny
+--------------------
+
+Date: 2020-09-01
+Link: https://news.ycombinator.com/item?id=24347414
+Comment:
+Yes, checked their site, it doesn't seem like they want their candidates to use Django.
+--------------------
+
+Date: 2020-09-01
+Link: https://news.ycombinator.com/item?id=24344518
+Comment:
+Didn't know about Pinterest
+--------------------
+
+Date: 2020-08-27
+Link: https://news.ycombinator.com/item?id=24297979
+Comment:
+Certainly Personal Blog!<p>You can always cross post on Medium and other such services. Just got to remember include the canonical URL.<p>That way you get the advantage of being searched on services like Medium, Dev.to and others (although, I don't think this is much since most search via Google). And you get the advantage of owning the content and your own personal brand.
+--------------------
+
+Date: 2020-08-21
+Link: https://news.ycombinator.com/item?id=24235802
+Comment:
+Another advantage of digital is search. Not that I use it regularly, but it can be useful in the future.<p>In defense of paper, I can say that with OCR technologies developing more and more in the future it will be no problem to move all hand written notes to a digital system.
+--------------------
+
+Date: 2020-08-21
+Link: https://news.ycombinator.com/item?id=24235357
+Comment:
+One big advantage of digital for me is that when using digital journal you can parse all the text with a  script and do some sort of analysis on the journal entries (# of words, time it took to write, which words are used the most, etc.). Apart form this I'm not sure. That said, I've never actually used this, but want to in the future.
+--------------------
+
+Date: 2020-08-20
+Link: https://news.ycombinator.com/item?id=24226452
+Comment:
+<a href="https://www.indiehackers.com/post/any-alternatives-to-google-analytics-ee4fa926ef" rel="nofollow">https://www.indiehackers.com/post/any-alternatives-to-google...</a><p>Thread on Indiehacker, some great answers there.<p>My choice is <a href="https://plausible.io" rel="nofollow">https://plausible.io</a>.
+--------------------
+
+Date: 2020-08-18
+Link: https://news.ycombinator.com/item?id=24200098
+Comment:
+Thanks :)
+--------------------
+
+Date: 2020-06-18
+Link: https://news.ycombinator.com/item?id=23564395
+Comment:
+I strongly recommend DigitalOcean.<p>They have a fantastic tutorial on deploying a Django app -> <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04" rel="nofollow">https://www.digitalocean.com/community/tutorials/how-to-set-...</a><p>If you end up using DigitalOcean here is my referral link that will give you $100 of hosting for free (20 months of free droplet use) -> <a href="https://m.do.co/c/a2a2c0826ff3" rel="nofollow">https://m.do.co/c/a2a2c0826ff3</a>
+--------------------
+
+Date: 2020-06-05
+Link: https://news.ycombinator.com/item?id=23429029
+Comment:
+Hey all,<p>Just made a quick post on adding emails to Pocket. This is somehow not a native Pocket feature, so I found a quick workaround.<p>Using publishthis.email you can simply turn any email into a webpage and then save to Pocket.<p>This will make it extremely easy to make notes on any email course and useful newsletters.<p>Please let me know if you have any feedback on the post, design or whatever. Would love to improve :)
+--------------------
+
+Date: 2020-05-20
+Link: https://news.ycombinator.com/item?id=23253444
+Comment:
+I use Sheets for personal data tracking, for content planning, for making quick financial projections, etc, etc, etc.<p>Would be easily top used tool for me if it wasn't blocked on the company level where I work.
+--------------------
+
+Date: 2020-05-19
+Link: https://news.ycombinator.com/item?id=23234425
+Comment:
+Ooh! Very excited about this. Can't wait.
+--------------------
+
+Date: 2020-05-15
+Link: https://news.ycombinator.com/item?id=23191511
+Comment:
+th0th, just added webgazer to builtwithdjango directory :) <a href="https://builtwithdjango.com/webgazer" rel="nofollow">https://builtwithdjango.com/webgazer</a>
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23185019
+Comment:
+Thanks!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23185016
+Comment:
+Thanks for giving this a try, this means a lot. Will try to play with CSS tonight!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23185007
+Comment:
+Thank you so much for your help! I'll try this tonight!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181555
+Comment:
+Do you have a demo link? Would love to check it out!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181527
+Comment:
+Nice! It would be pretty relevant for me, but I just got denied my H1B. Will use seekingvisa next year :)
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181512
+Comment:
+Can you provide some links please? :)
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181451
+Comment:
+Wow, simply wow! Great work!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181403
+Comment:
+Thanks!<p>Yes, I am aware of the problem you are referring to. I've known about it for some time, but I can't do anything about it. I just don't understand why the images don't show up.<p>I've searched everywhere, but couldn't find the solution. I fanyone here knows how to solve it, I'd be forever grateful.
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181284
+Comment:
+Do you have a demo link? I would love to check it out!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181264
+Comment:
+Congrats!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181235
+Comment:
+Starred! <i></i>*<p>It's way too advanced for my current skill level but is certainly I am working towards. Nice job!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181203
+Comment:
+Sounds cool, one of my goals of learning Django was to merge my interests in Data Science and Web Development, sort of Data Science as a Software (DSaaS).<p>Do you have a demo link? Would love to check it out!
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181179
+Comment:
+Hah, that's an awesome project. I'd say it is somewhat similar to Josh Shpigford's Laser Tweets (<a href="https://lasertweets.co/" rel="nofollow">https://lasertweets.co/</a>).
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181156
+Comment:
+That looks cool. I have been thinking about restarting my hobby of "electrical engineering". When I start learning this will certainly be my go-to tool.
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23181114
+Comment:
+Can you share the link?
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23180884
+Comment:
+That's awesome! I am actually finalizing some editing for my podcast right now and hope to launch by the end of May.<p>I was planning to use Transistor.FM for hosting, but now will certainly consider using Wisecast to support a fellow Django maker.
+--------------------
+
+Date: 2020-05-14
+Link: https://news.ycombinator.com/item?id=23180856
+Comment:
+Oh, I can certainly relate! Each time I start a project I think it will take x amount of time ends up taking 10 times more.<p>Do you have a landing page? Or is it only possible to login / register?
+--------------------
+
+Date: 2020-04-23
+Link: https://news.ycombinator.com/item?id=22957153
+Comment:
+Wonderful personal website!<p>One question though, are icons supposed to be that big?
+--------------------
+
+Date: 2020-04-23
+Link: https://news.ycombinator.com/item?id=22956784
+Comment:
+I've used DigitalOcean (ref link -> <a href="https://m.do.co/c/a2a2c0826ff3" rel="nofollow">https://m.do.co/c/a2a2c0826ff3</a>) to host my Django sites, both with postgresql and sqlite. It will take you some time to figure out how to host it.<p>Once you a succeed each subsequent time becomes much easier. Plus you get to learn a ton about server management.<p>There are fantastic posts that will help you.<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04" rel="nofollow">https://www.digitalocean.com/community/tutorials/how-to-set-...</a>
+--------------------
+
+Date: 2020-01-24
+Link: https://news.ycombinator.com/item?id=22141401
+Comment:
+Bookmarked
+--------------------
+
+Date: 2020-01-24
+Link: https://news.ycombinator.com/item?id=22137926
+Comment:
+When I find something interesting  I add it to a daily email digest I send to myself.<p>Subject line: 1/24/2019 Rk Digest
+Body: all the links, plus a description<p>Not the most efficient, but gets the job done for now. Thinking of a better way to do it, perhaps some sort of digital garden.
+--------------------
