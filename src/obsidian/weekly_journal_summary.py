@@ -3,6 +3,10 @@ import glob
 import anthropic
 from pathlib import Path
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 def get_last_week_dates():
     """
@@ -85,7 +89,7 @@ def analyze_with_claude(content):
 
     try:
         response = client.messages.create(
-            model="claude-3-7-sonnet-latest",
+            model="claude-sonnet-4-20250514",
             max_tokens=1000,
             messages=[{"role": "user", "content": [{"type": "text", "text": prompt}]}],
         )
