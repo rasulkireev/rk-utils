@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 from src.obsidian.weekly_journal_summary import get_last_week_notes
 from src.raindrop.main import add_tag_to_raindrop, get_last_7_raindrops_from_other, get_random_person_from_collection
 from src.readwise.highlights import filter_highlights_by_date_range, get_highlights_last_7_days
+from src.readwise.utils import fetch_recently_archived_documents
 
 load_dotenv()
 
@@ -23,6 +24,8 @@ client = anthropic.Client(api_key=api_key)
 
 
 def create_personal_updates_block():
+    print("Creating personal updates block...")
+
     journal_content = get_last_week_notes()
 
     prompt = f"""use these journal entries from my journal to create a list of bullet points.
@@ -50,6 +53,8 @@ def create_personal_updates_block():
 
 
 def create_quote_of_the_week_block():
+    print("Creating quote of the week block...")
+
     recent_highlights_by_updated_at = get_highlights_last_7_days()
     recent_highlights_by_highlighted_at = filter_highlights_by_date_range(recent_highlights_by_updated_at, days=7)
 
@@ -99,6 +104,8 @@ def create_quote_of_the_week_block():
 
 
 def create_cool_person_block():
+    print("Creating cool person block...")
+
     person = get_random_person_from_collection()
 
     url = person.get("link")
@@ -146,7 +153,7 @@ def create_cool_person_block():
 
     Example:
     ```
-    ## 😄 Cool person I encountered this week
+    ## Cool person I encountered this week
 
     **Brajeshwar Oinam**
 
@@ -173,7 +180,30 @@ def create_cool_person_block():
     return content
 
 
+def create_recently_read_articles_block():
+    print("Creating recently read articles block...")
+
+    articles = fetch_recently_archived_documents()
+
+    block = "## ## Articles I read this week\n\n"
+    for article in articles:
+        title = article.get("title")
+        author = article.get("author")
+        source_url = article.get("source_url")
+        summary = article.get("summary")
+
+        if "mailto" in source_url:
+            block += f"- {title} by {author} - {summary}\n\n"
+        else:
+            block += f"- [{title}]({source_url}) by {author} - {summary}\n\n"
+
+    return block
+
+
+
 def create_other_cool_links_block():
+    print("Creating other cool links block...")
+
     raindrops = get_last_7_raindrops_from_other()
 
     block = "## Other cool links\n"
@@ -188,24 +218,27 @@ def create_other_cool_links_block():
 
 
 def create_support_block():
-    return """##Support
+    print("Creating support block...")
+
+    return """## Support
 
 You can support this project by using one of the affiliate links below. These are always going to be projects I use and love! No "Bluehost" crap here!
 
 - [Buttondown](https://buttondown.email/refer/rasulkireev) - Email newsletter tool I use to send you this newsletter.
 - [Readwise](https://readwise.io/i/rasul) - Best reading software company out there. I you want to up your e-reading game, this is definitely for you! It also so happens that I work for Readwise. Best company out there!
 - [Hetzner](https://hetzner.cloud/?ref=Ju1ttKSG0Fn7) - IMHO the best place to buy a VPS or a server for your projects. I'll be doing a tutorial on how to use this in the future.
+- [SaaS Pegasus](https://www.saaspegasus.com/?via=rasul) is one of the best (if not the best) ways to quickstart your Django Project. If you have a business idea but don't want to set up all the boring stuff (Auth, Payments, Workers, etc.) this is for you!
 """
 
 
 def create_sponsors_block():
-    return """## 🤑 Sponsors
+    print("Creating sponsors block...")
 
-This newsletter is sponsored by [TJ Alerts](https://gettjalerts.com). Well, sponsor is a strong word. It is just another project of mine that I wanted to share with you 🙈. Fully free!
+    return """## Sponsors
 
-**If you are looking for a job, I think this will be extremely useful to you.**
+This newsletter is sponsored by [Marketing Agents](https://marketingagents.net). Well, sponsor is a strong word. It is just another project of mine that I wanted to share with you 🙈.
 
-I search the whole web for current job openings and categorize them on many aspects (location, tech used, salary, etc.). You can search those jobs and subscribe to receive recurring updates on latest jobs that match your filters.
+**If you have a side project and are struggling with the marketing side, it might help! It's still in early dev, so any feedback is super useful.**
 
 > If you want to become a real sponsor, just reply to this email 😄
 """
@@ -215,6 +248,8 @@ if __name__ == "__main__":
     newsletter_content = """Hey, Happy Tuesday!
 
 > ***Why are you getting this***: You signed up to receive this newsletter on [my personal website](https://rasulkireev.com). I promised to send you the most interesting sites and resources I have encountered during the week. *If you don't want to receive this newsletter, feel free to* [*unsubscribe*]({{ unsubscribe_url }}) *anytime.*"""
+
+    newsletter_content += "\n\n"
 
     personal_updates_block = create_personal_updates_block()
     newsletter_content += personal_updates_block
@@ -233,6 +268,11 @@ if __name__ == "__main__":
 
     # tweet_block = create_tweet_of_the_week_block()
     # newsletter_content += tweet_block
+
+    newsletter_content += "\n\n"
+
+    recently_read_arrticles = create_recently_read_articles_block()
+    newsletter_content += recently_read_arrticles
 
     newsletter_content += "\n\n"
 

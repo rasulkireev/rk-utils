@@ -1,3 +1,5 @@
+# TODO: Include "What I liked" and "What I didn't like" sections. LIke here: https://mtlynch.io/book-reports/start-small-stay-small/
+
 import os
 from dotenv import load_dotenv
 import openai
