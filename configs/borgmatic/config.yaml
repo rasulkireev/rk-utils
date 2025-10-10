@@ -1,0 +1,66 @@
+# Where to look for files to backup, and where to store those backups.
+location:
+    source_directories:
+        - /etc
+        - /captain/data
+        - /var/lib/docker/volumes
+        - /root
+
+    repositories:
+        - ssh://u497578@u497578.your-storagebox.de:23/./caprover-backup
+
+    one_file_system: true
+    atime: false
+
+    exclude_patterns:
+        - /var/lib/docker/volumes/**/cache
+        - /var/lib/docker/volumes/**/tmp
+        - /var/lib/docker/volumes/**/*.log
+        - /var/lib/docker/volumes/**/lost+found
+        - /captain/data/nginx/cache
+        - '*.pyc'
+        - '*.tmp'
+        - '*~'
+        - '*access.log'
+
+    exclude_caches: true
+
+# Repository storage options
+storage:
+    encryption_passphrase: $BORG_ENCRYPTION_PASSPHRASE
+    compression: lz4
+    ssh_command: ssh -i /root/.ssh/storagebox -p 23
+    archive_name_format: 'caprover-{now:%Y-%m-%d-%H%M%S}'
+
+# Retention policy
+retention:
+    prefix: 'caprover-'  # ADD THIS LINE - must match the prefix in archive_name_format
+    keep_daily: 3
+    keep_weekly: 2
+    keep_monthly: 2
+    keep_yearly: 1
+
+# Consistency checks
+consistency:
+    checks:
+        - repository
+        - archives
+    check_last: 3
+
+# Options for customizing borgmatic's own output and logging
+output:
+    color: true
+
+# Shell commands, scripts, or integrations
+hooks:
+    before_backup:
+        - echo "Starting CapRover backup at $(date)"
+        - curl -fsS --retry 3 https://healthchecks.cr.lvtd.dev/ping/dc3b051b-2efd-4b39-a283-c4c6a2641240/start || true
+
+    after_backup:
+        - echo "Backup completed at $(date)"
+        - curl -fsS --retry 3 https://healthchecks.cr.lvtd.dev/ping/dc3b051b-2efd-4b39-a283-c4c6a2641240 || true
+
+    on_error:
+        - echo "BACKUP FAILED at $(date)"
+        - curl -fsS --retry 3 https://healthchecks.cr.lvtd.dev/ping/dc3b051b-2efd-4b39-a283-c4c6a2641240/fail || true

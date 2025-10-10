@@ -16,6 +16,7 @@ from src.obsidian.weekly_journal_summary import get_last_week_notes
 from src.raindrop.main import add_tag_to_raindrop, get_last_7_raindrops_from_other, get_random_person_from_collection
 from src.readwise.highlights import filter_highlights_by_date_range, get_highlights_last_7_days
 from src.readwise.utils import fetch_recently_archived_documents
+from src.twitter.utils import generate_tweet_thread_from_newsletter, send_to_typefully
 
 load_dotenv()
 
@@ -185,8 +186,11 @@ def create_recently_read_articles_block():
 
     articles = fetch_recently_archived_documents()
 
-    block = "## ## Articles I read this week\n\n"
+    block = "## Favourite articles I read this week\n\n"
     for article in articles:
+        # todo filter out articles that are
+        # author: exploding topics, hacker news digest,
+        # source: emails, (maybe rss)
         title = article.get("title")
         author = article.get("author")
         source_url = article.get("source_url")
@@ -290,3 +294,6 @@ if __name__ == "__main__":
     newsletter_content += sponsors_block
 
     print(newsletter_content)
+
+    thread = generate_tweet_thread_from_newsletter(newsletter_content)
+    send_to_typefully(thread)
