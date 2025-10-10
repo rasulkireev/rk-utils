@@ -1,9 +1,7 @@
 name: Build and Push Postgres to Dockerhub
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -11,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        postgres_version: ["15", "16", "17"]
+        postgres_version: ["17", "18"]
 
     steps:
       - name: Checkout
