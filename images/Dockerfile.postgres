@@ -13,7 +13,7 @@ RUN apt-get update && \
       postgresql-contrib-${POSTGRES_VERSION}
 
 RUN cd /tmp && \
-    git clone --branch v0.8.0 https://github.com/pgvector/pgvector.git && \
+    git clone --branch v0.8.1 https://github.com/pgvector/pgvector.git && \
     cd pgvector && \
     make clean && \
     make OPTFLAGS="" && \
