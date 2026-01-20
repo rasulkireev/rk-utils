@@ -137,7 +137,7 @@ def print_flat_key_list(all_keys):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python analyze_json_keys.py <path_to_json_file>")
+        print("Usage: python json_format.py <path_to_json_file>")
         return
 
     json_path = sys.argv[1]

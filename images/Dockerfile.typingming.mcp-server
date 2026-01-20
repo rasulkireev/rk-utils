@@ -1,9 +1,11 @@
 FROM node:18-alpine
 
+# App listens on port 80 inside the container
 ENV PORT=80
-
 EXPOSE 80
 
-RUN npm install -g @typingmind/mcp
+# Optional but recommended for proper shutdown handling
+RUN apk add --no-cache tini
 
-CMD ["sh", "-c", "mcp {KEY}"]
+ENTRYPOINT ["/sbin/tini", "--"]
+CMD ["sh", "-c", "npx -y @typingmind/mcp@latest"]

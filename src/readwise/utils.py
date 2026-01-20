@@ -3,16 +3,30 @@ import requests
 from dotenv import load_dotenv
 from datetime import datetime, timedelta, timezone
 
-# Load environment variables early
-load_dotenv()
-
 # Configuration
-READWISE_TOKEN = os.getenv("READWISE_TOKEN")
 API_URL = "https://readwise.io/api/v3/list/"
+
+def _safe_load_dotenv() -> None:
+    """
+    Some environments (e.g. sandboxed execution) may block access to `.env`.
+    We want imports to be safe, so load dotenv defensively.
+    """
+    try:
+        load_dotenv()
+    except (PermissionError, OSError):
+        # Fall back to already-present process environment variables.
+        pass
+
+
+def _get_readwise_token() -> str | None:
+    _safe_load_dotenv()
+    return os.getenv("READWISE_TOKEN")
+
 
 def fetch_all_documents(category=None, location=None):
     """Fetch all documents from the Readwise Reader API, handling pagination."""
-    if not READWISE_TOKEN:
+    token = _get_readwise_token()
+    if not token:
         raise ValueError("Missing READWISE_TOKEN in environment variables. Ensure it's set in your .env file.")
 
     all_docs = []
@@ -33,7 +47,7 @@ def fetch_all_documents(category=None, location=None):
         try:
             response = requests.get(
                 API_URL,
-                headers={"Authorization": f"Token {READWISE_TOKEN}"},
+                headers={"Authorization": f"Token {token}"},
                 params=params,
                 timeout=30 # Add a timeout
             )
@@ -67,7 +81,8 @@ def fetch_all_documents(category=None, location=None):
 
 
 def fetch_recently_archived_documents(days=7):
-    if not READWISE_TOKEN:
+    token = _get_readwise_token()
+    if not token:
         raise ValueError("Missing READWISE_TOKEN in environment variables. Ensure it's set in your .env file.")
 
     # Calculate the cutoff date (N days ago) - make it timezone-aware (UTC)
@@ -91,7 +106,7 @@ def fetch_recently_archived_documents(days=7):
         try:
             response = requests.get(
                 API_URL,
-                headers={"Authorization": f"Token {READWISE_TOKEN}"},
+                headers={"Authorization": f"Token {token}"},
                 params=params,
                 timeout=30
             )
